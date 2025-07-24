@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Tour</title>
+
+    <!-- Montserrat Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Inline CSS for animations and grid layout -->
+    <style>
+        .item-vr {
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+            box-sizing: border-box;
+            max-width: 600px;
+            /* Increased width for better visibility */
+        }
+
+        .item-vr:hover {
+            transform: scale(1.05);
+        }
+
+        .item-vr.fullscreen iframe {
+            height: 80vh;
+        }
+
+        .item-vr h3,
+        .item-vr p {
+            pointer-events: none;
+            /* Prevent text from triggering hover or click events */
+            user-select: text;
+            /* Ensure text is selectable */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .item-vr.loading::after {
+            content: 'Loading...';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 1em;
+        }
+
+        .gallery-vr {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Two columns per row */
+            gap: 30px;
+            padding: 30px;
+            background-image: url('https://p.turbosquid.com/ts-thumb/CD/xjbdRr/3b/historical_gallery_interior_360/jpg/1743509432/1920x1080/turn_fit_q99/7d5d4735899c43eb8bb37b2f81c1da3d95782ab1/historical_gallery_interior_360-34.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .gallery-vr {
+                grid-template-columns: 1fr;
+                /* Single column for smaller screens */
+                gap: 20px;
+                padding: 20px;
+                margin: 15px;
+            }
+
+            .item-vr {
+                max-width: 100%;
+                /* Full width on smaller screens */
+                height: 350px;
+                /* Slightly smaller height */
+            }
+
+            .item-vr iframe {
+                height: 200px;
+                /* Adjust iframe height */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-vr {
+                gap: 15px;
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .item-vr {
+                height: 300px;
+                /* Further reduced for mobile */
+            }
+
+            .item-vr iframe {
+                height: 180px;
+                /* Further reduced iframe height */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <h3 class="head">MUSEUMS IN INDIA</h3>
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <a class="buttonlink" href="index.html">
+                <div class="buttonhm">Home</div>
+            </a>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">home</span> HOME
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="grid.html">
+                        <span class="material-icons-outlined">museum</span> MUSEUMS
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="contactus.html">
+                        <span class="material-icons-outlined">call</span> Contact Us
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="aboutus.html">
+                        <span class="material-icons-outlined">group</span> About Us
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="3d.html">
+                        <span class="material-icons-outlined">3d_rotation</span> 3D View
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="vr.html">
+                        <span class="material-icons-outlined">vrpano</span> 360° View
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="video.html" target="_blank">
+                        <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="booking.html">
+                        <span class="material-icons-outlined">confirmation_number</span> Book Tickets
+                    </a>
+                </li>
+            </ul>
+            <button
+                onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+                style="
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    padding: 6px 12px;
+                    background-color: #80b9cb;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                " id="open-bot-btn">
+                💬 Open Chatbot
+            </button>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">VR Tour - Museums</p>
+            </div>
+            <div class="gallery-vr">
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751209960574!6m8!1m7!1snghafE7aA09Ws9t1fkjomg!2m2!1d17.72077931752447!2d83.33413974474936!3f279.09775!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Vishaka Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Andhra Pradesh</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751208679505!6m8!1m7!1slg7_XyFQbVhbk0c5ROKdKg!2m2!1d27.10171948008466!2d93.62486193285382!3f310.5153433195254!4f-1.8582344340639025!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Jawaharlal Nehru State Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Arunachal Pradesh</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210025058!6m8!1m7!1svBUD9-vzjdifwMhOhRTlmQ!2m2!1d26.12972517579353!2d91.82220594639992!3f4.407937!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Sankardev Kalakshetra Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Assam</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210085655!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzRqZDJ0R3c.!2m2!1d25.62079191924499!2d85.14257802097322!3f314.71246!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Gandhi Sanghralaya</h3>
+                    <p style="font-size: 0.95em; color: #333;">Bihar</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210141657!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQzJfcXZab3dF!2m2!1d21.24388659776304!2d81.64491786166316!3f86.41771!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Mahant Ghasidas Memorial Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Chhattisgarh</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210196019!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDFyZU9GekFF!2m2!1d15.50107002078708!2d73.90707313658038!3f288.02652!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Museum of Christian Art</h3>
+                    <p style="font-size: 0.95em; color: #333;">Goa</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210248664!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRC1pT2lfYVE.!2m2!1d21.51971037016679!2d70.44916860906027!3f256.03067!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Darbar Hall Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Gujarat</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210298395!6m8!1m7!1srrCYjCuXnSBvaNg1ygwViw!2m2!1d28.25301304414391!2d76.92293081821704!3f92.90916!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Heritage Transport Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Haryana</p>
+                </div><!--
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751204389157!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ08wdC1HeVFF!2m2!1d17.3716083605579!2d78.48024392270783!3f331.2127!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Bhuri Singh Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Himachal Pradesh</p>
+                </div>-->
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210588083!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHl3UHZLMmdF!2m2!1d32.7477097688774!2d74.87229271003487!3f186.76032322320808!4f23.7430033157124!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Amar Mahal Palace</h3>
+                    <p style="font-size: 0.95em; color: #333;">Jammu & Kashmir</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210792934!6m8!1m7!1shxuoTTdRnXlfspSjlVAJ0g!2m2!1d24.0093972627932!2d85.37840729323219!3f47.83011!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Sanskriti Museum and Art Gallery</h3>
+                    <p style="font-size: 0.95em; color: #333;">Jharkhand</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210874217!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0VxT203VXc.!2m2!1d12.97524744427972!2d77.59686284154688!3f156.33066!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Visvesvaraya Industrial & Technological Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Karnataka</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210922136!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDQ4STNuZnc.!2m2!1d8.509148192746434!2d76.95513283472768!3f96.77741!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Napier Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Kerala</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751210978877!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0Z4OTJfQ3c.!2m2!1d23.23551755776046!2d77.38558372845426!3f302.27979472720756!4f1.881547326606011!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">State Museum Bhopal</h3>
+                    <p style="font-size: 0.95em; color: #333;">Madhya Pradesh</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211033890!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ3gtYnpKTFE.!2m2!1d18.92690153803966!2d72.83269156237266!3f136.90317!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Chhatrapati Shivaji Maharaj Vastu Sanghralaya</h3>
+                    <p style="font-size: 0.95em; color: #333;">Maharashtra</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211110339!6m8!1m7!1sDFIFbC5iDFea9ZoWaHY8mQ!2m2!1d24.7961344234405!2d93.93607235696528!3f243.14676!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">RKCS Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Manipur</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211166629!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0U4UDJ6YlE.!2m2!1d25.5928124238335!2d91.88272786883967!3f8.162432!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Don Bosco Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Meghalaya</p>
+                </div><!---
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751204389157!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ08wdC1HeVFF!2m2!1d17.3716083605579!2d78.48024392270783!3f331.2127!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">State Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Mizoram</p>
+                </div>
+                <div class="item
+
+-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751204389157!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ08wdC1HeVFF!2m2!1d17.3716083605579!2d78.48024392270783!3f331.2127!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Kohima Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Nagaland</p>
+                </div>-->
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211340532!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRHF4ZUxyVEE.!2m2!1d20.25632379568141!2d85.8411333063854!3f71.72056!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">State Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Odisha</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211400043!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzB2c1NlRUE.!2m2!1d31.62563580842846!2d74.87908361920871!3f283.36508!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">The Partition Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Punjab</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211447008!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ3BndEx4ZUE.!2m2!1d26.91158492635928!2d75.81941200809062!3f195.3068!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Albert Hall Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Rajasthan</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211496996!6m8!1m7!1st7dhLRePm4HNwmkDYVffAQ!2m2!1d27.31766850234431!2d88.60233386952459!3f171.65451!4f0!5f0."
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Black Cat Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Sikkim</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211548473!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0VtS3VhMXdF!2m2!1d12.6093958793552!2d80.18755670767655!3f320.54865!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">India Seashell Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Tamil Nadu</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751204389157!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ08wdC1HeVFF!2m2!1d17.3716083605579!2d78.48024392270783!3f331.2127!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Salar Jung Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Telangana</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211609543!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2VsZHJLYkE.!2m2!1d23.83735027219966!2d91.28271277165962!3f42.99847!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Ujjayanta Palace Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Tripura</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211706470!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2tocUdNRWc.!2m2!1d26.84532466680637!2d80.95502707931496!3f29.074226!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Government Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Uttar Pradesh</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211765451!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRGs0SUw3cGdF!2m2!1d29.70550446026537!2d79.7539679665234!3f306.81160189269974!4f-23.88400317701928!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Binsar Sanctuary Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">Uttarakhand</p>
+                </div>
+                <div class="item-vr" style="
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    height: 400px;
+                    padding: 15px;
+                    text-align: center;
+                    position: relative;
+                    box-sizing: border-box;
+                ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!4v1751211812348!6m8!1m7!1smmYiWYpCVOv2xWSbrlkigA!2m2!1d22.55803919937705!2d88.35053778067447!3f105.80266!4f0!5f0.7820865974627469"
+                        width="100%" height="250px" style="border: 1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 style="font-size: 1.3em; margin: 10px 0;">Indian Museum</h3>
+                    <p style="font-size: 0.95em; color: #333;">West Bengal</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Sidebar functionality
+        function openSidebar() {
+            document.getElementById('sidebar').style.transform = 'translateX(0)';
+        }
+
+        function closeSidebar() {
+            document.getElementById('sidebar').style.transform = 'translateX(-100%)';
+        }
+
+        // Fullscreen toggle and loading indicator
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.item-vr');
+            items.forEach(item => {
+                // Fullscreen toggle
+                item.addEventListener('click', (e) => {
+                    // Prevent fullscreen toggle if clicking on h3 or p
+                    if (!e.target.closest('h3') && !e.target.closest('p') && !e.target.closest('iframe')) {
+                        item.classList.toggle('fullscreen');
+                    }
+                });
+
+                // Loading indicator
+                const iframe = item.querySelector('iframe');
+                if (iframe) {
+                    item.classList.add('loading');
+                    iframe.addEventListener('load', () => {
+                        item.classList.remove('loading');
+                    });
+                }
+            });
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.5s ease forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            items.forEach(item => observer.observe(item));
+        });
+    </script>
+</body>
+
+</html>

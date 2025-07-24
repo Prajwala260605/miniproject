@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Uttarakhand</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">UTTARAKHAND</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>CORBETT Museum</h1>
+          <p>
+            A heritage museum, Corbett Museum is just more than a museum near Kaladhungi. Historians, heritage and
+            wildlife lovers take a must visit to this special museum. Once a place of stay during winters for renowned
+            hunter turned environmentalist Jim Corbett, this museum display amazing belongings of him.
+          </p>
+          <div id="image">
+            <img src="https://www.corbett-national-park.com/corbett-images/corbett-museum.webp" height="318px"
+              width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            The Corbett Museum is located in a small settlement situated near Kaladungi village named Choti Haldwani, of
+            which Jim Corbett was the owner and later distributed these 89 hectares of land to the locals when Britisers
+            left India in 1947. The Corbett Museum used to be his bungalow he used as his winter home in Uttarakhand.
+
+            The Museum also displays the memories from his hunting's as he was known across the subcontinent for his
+            shooting skills and called upon frequently to shoot leopards or tigers causing havoc. The museum is a
+            delightful structure with white texture and green premises. Garden with well-maintained grass and large
+            trees creates a soothing environment and makes you comfortable for your stroll in the museum. Jim Corbett
+            was a multi-faceted person and the Corbett Museum showcases all of the aspects of his life
+          </p>
+
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://th.bing.com/th/id/OIP.XZFS5zHmW_adnRwQ-22nJAHaFj?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+            <img
+              src='https://media.tripinvites.com/places/jim-corbett-national-park/corbett-museum/entry-of-jim-corbett-museum-featured.jpg'
+              height='200px' width="'400px">
+            <img src='https://i.ytimg.com/vi/d8n1INExMD8/maxresdefault.jpg' height='200px' width="'400px">
+            <img
+              src='https://hblimg.mmtcdn.com/content/hubble/img/corbett/mmt/activities/m_Jim%20Corbett_Corbett%20Museum_activities_l_400_640.jpg'
+              height='200px' width="'400px">
+          </div>
+          <h1>TIMINGS</h1>
+          <div>
+            <h4>MONDAY</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Tuesday</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Wednesday</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Thursday</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Friday</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Saturday</h4>
+            <p>8:00AM - 5:00PM</p>
+            <h4>Sunday</h4>
+            <p>8:00AM - 5:00PM</p>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.6448749020483!2d79.33569587536105!3d29.2927536753107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a75b59dfccbed%3A0x8c47ed58aca626b9!2sJim%20Corbett%20Museum!5e0!3m2!1sen!2sin!4v1749338256186!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Uttarakhand, India
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

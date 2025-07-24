@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Gujarat</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">GUJARAT</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>DARBAR HALL MUSEUM</h1>
+          <p>Built in a beautiful old palace of Junagarh, the Darbar Hall Museum is amongst the finest museums in
+            Gujarat as it preserves the treasures of the Junagarh rulers. Darbar Hall was the court for the erstwhile
+            Nawabs of Junagadh and was later converted into a museum to preserve the possessions of Junagarh Maharajas.
+            The splendid repository includes the 19th-century possession of the Nawabs that were found here years ago.
+            Darbar Hall Museum houses different galleries exhibiting around 2900 artefacts- picture gallery, palanquin
+            room, textile and costumes gallery, weapons gallery, etc. Picture gallery boasts a large collection of
+            photographs and paintings of last Nawab with his numerous dogs. The artefacts like weapons, armour,
+            palanquins, sparkling chandeliers, howdahs, diamond woven carpets, photos, gowns, silver items, jewellery
+            and paintings that depict the lifestyles of the Nawabs are the major highlights of the museum. Owing to its
+            exquisite collection of artefacts, the museum is visited by people in huge number.</p>
+          <div id="image">
+            <img src="https://th.bing.com/th/id/OIP.5NbJt03lQAawlTr0eH7HwQHaEL?rs=1&pid=ImgDetMain" height="318px"
+              width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>The founders and curators might have had a specific vision for the museum, intending to provide visitors
+            with insights into the historical, cultural, and artistic aspects of Gujarat's royal courts.If the museum
+            has undergone renovations or expansions, it could reflect a commitment to preserving and presenting the
+            historical heritage of Gujarat. Recognition and support from local authorities or cultural institutions may
+            have contributed to its growth.
+          </P>
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://th.bing.com/th/id/OIP.q8JAtaEDvpS1Y7rTjnyqgQHaFj?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+            <img src='https://www.tourmyindia.com/images/darbar-hall-museum-junagadh.jpg' height='200px' width="'400px">
+            <img
+              src='https://www.gujaratorbit.com/assets/images/GujaratImageGallery/Museums/Darbar_Hall_Museum/Darbar-Hall-Museum-6.jpg'
+              height='200px' width="'400px">
+            <img src='https://www.hlimg.com/images/things2do/738X538/ttd_201811261036211543208781486450t.jpg'
+              height='200px' width="'400px">
+          </div>
+          <h1>TIMINGS</h1>
+          <div>
+            <P>10:00 AM to 1:15 PM & 2:45 PM to 6:00 PM, Closed on Wednesday, 2nd and 4th Saturday and all public
+              holidays.</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1895960.7035154619!2d70.10319632464267!3d20.976239790066607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958018fb9a464d5%3A0xcb0561da74b8b4a4!2sJunagadh%20Museum!5e0!3m2!1sen!2sin!4v1749336953388!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Taj Manzil Building, Sardarbaug, Junagadh - 362001
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

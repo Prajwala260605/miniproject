@@ -1,0 +1,277 @@
+/* Interactive Map */
+.imap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  /* Limits size for larger screens */
+  height: 100%;
+  margin: auto;
+  /* Additional centering for compatibility */
+  position: relative;
+}
+
+.imap path {
+  fill: #80b9cb;
+  stroke: #35474b;
+  stroke-width: 2px;
+  transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
+  opacity: 1;
+  /* Static appearance */
+  position: relative;
+  /* For positioning pseudo-elements */
+}
+
+.imap path:hover {
+  fill: #35474b;
+  /* Changed to requested hover color */
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 8px rgba(128, 185, 203, 0.7);
+  /* Matches homepage circle hover */
+}
+
+/* Region Name Labels */
+.imap path[data-name]::after {
+  content: attr(data-name);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centered without initial scale */
+  color: #ffffff;
+  /* White for contrast */
+  font-family: "Montserrat", sans-serif;
+  /* Matches styles.css */
+  font-size: 12px;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  /* Enhances readability */
+  opacity: 1;
+  /* Static appearance */
+  pointer-events: none;
+  /* Prevents interfering with path interactions */
+}
+
+.imap path:hover::after {
+  transform: translate(-50%, -50%) scale(1.1);
+  /* Syncs with path hover */
+  text-shadow: 0 0 8px rgba(128, 185, 203, 0.7);
+  /* Matches path hover glow */
+}
+
+.imap.loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(128, 185, 203, 0.2), rgba(128, 185, 203, 0.4));
+  opacity: 0;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.imap.loading path {
+  opacity: 0.3;
+}
+
+.imap.loading path::after {
+  opacity: 0;
+  /* Hide labels during loading */
+}
+
+#go {
+  color: lightblue;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #213031;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Navigation Links */
+.sidebar nav a {
+  display: block;
+  text-decoration: none;
+  color: #d1e8f0;
+  padding: 10px;
+  margin: 5px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(128, 185, 203, 0.8);
+  outline: none;
+}
+
+#darkModeToggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+}
+
+/* Dark Mode Button */
+.dark-mode-toggle {
+  background: linear-gradient(to right, #80b9cb, #35474b);
+  background-size: 200% 100%;
+
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 190px;
+  transition: transform 0.3s ease, background-position 0.3s ease;
+  animation: gradientShift 4s ease-in-out infinite;
+
+  /* ADD THESE TO REMOVE THE WHITE BOX */
+  background-color: transparent;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+.dark-mode-toggle img {
+  width: 20px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: linear-gradient(to right, #80b9cd, #2a373a);
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:hover img {
+  transform: rotate(15deg);
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #d1e8f0;
+}
+
+.dark-mode .imap path {
+  fill: #a8d5e5;
+  stroke: #2a373a;
+}
+
+.dark-mode .imap path:hover {
+  fill: #2a373a;
+  /* Slightly darker for contrast in dark mode */
+}
+
+.dark-mode .imap path::after {
+  color: #d1e8f0;
+  /* Lighter for dark mode contrast */
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background: linear-gradient(to right, rgba(128, 185, 203, 0.2), rgba(128, 185, 203, 0.4));
+  }
+
+  50% {
+    background: linear-gradient(to right, rgba(128, 185, 203, 0.4), rgba(128, 185, 203, 0.2));
+  }
+
+  100% {
+    background: linear-gradient(to right, rgba(128, 185, 203, 0.2), rgba(128, 185, 203, 0.4));
+  }
+}
+
+/* Ensure Profile is styled consistently with other sidebar items */
+/*.sidebar-list-item a[href="profile.html"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-list-item a[href="profile.html"]:hover {
+  background: #2a5c50;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.sidebar-list-item a[href="profile.html"]:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.sidebar-list-item a[href="profile.html"] .material-icons-outlined {
+  font-size: 24px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-list-item a[href="profile.html"]:hover .material-icons-outlined {
+  transform: rotate(15deg);
+}*/
+
+.andhra {
+  color: #1e1e1e;
+}

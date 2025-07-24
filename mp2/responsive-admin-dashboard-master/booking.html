@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Book Museum Ticket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        /* Background Animation */
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at 20% 20%, #f7f1e3, #c8d6e5, #dff9fb, #f6e58d);
+            background-size: 300% 300%;
+            animation: floatGradient 20s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes floatGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Particle Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#ffffff33 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: twinkle 6s infinite ease-in-out alternate;
+            z-index: 0;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0.4;
+                transform: scale(1.05);
+            }
+        }
+
+        .container {
+            position: relative;
+            max-width: 920px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 45px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            z-index: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+            color: #999;
+            font-weight: 500;
+            position: relative;
+            font-size: 15px;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: #ccc;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .step:first-child::after {
+            left: 50%;
+            width: 50%;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step.active {
+            color: #5d3f6a;
+            font-weight: bold;
+        }
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        select,
+        input[type="date"],
+        input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 14px;
+            width: 100%;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: 0.3s border, 0.3s box-shadow;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        select:focus,
+        input:focus {
+            outline: none;
+            border-color: #8e44ad;
+            box-shadow: 0 0 6px rgba(142, 68, 173, 0.3);
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .slot {
+            flex: 0 0 calc(25% - 16px);
+            background: #ffffffaa;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .slot.available {
+            color: #27ae60;
+        }
+
+        .slot.booked {
+            color: #999;
+            background: #e0e0e0;
+            pointer-events: none;
+        }
+
+        .slot.selected {
+            border: 2px solid #8e44ad;
+            background: #f5ecf8;
+        }
+
+        .slot:hover:not(.booked):not(.selected) {
+            background-color: #faf5ff;
+            border-color: #ccc;
+        }
+
+        .btn-next {
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 14px 34px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            float: right;
+            box-shadow: 0 6px 16px rgba(142, 68, 173, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-next:hover {
+            background-color: #732d91;
+            transform: translateY(-2px);
+        }
+
+        .ticket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .ticket-table td {
+            padding: 14px;
+            vertical-align: middle;
+        }
+
+        .ticket-table input[type="number"] {
+            width: 90px;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        .amount {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="steps">
+            <div class="step active">Select Date & Time<br><small>Step 1</small></div>
+            <div class="step">Choose Tickets<br><small>Step 2</small></div>
+            <div class="step">Contact Details<br><small>Step 3</small></div>
+            <div class="step">Payment & Confirmation<br><small>Step 4</small></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step-content active" id="step1">
+            <h3>Select State</h3>
+            <select id="stateSelect" onchange="updateMuseumOptions()">
+                <option value="">-- Select State --</option>
+                <option value="AndhraPradesh">Andhra Pradesh</option>
+                <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="HimachalPradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="MadhyaPradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="TamilNadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="UttarPradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="WestBengal">West Bengal</option>
+                <option value="Delhi">Delhi</option>
+
+            </select>
+
+            <h3>Select Museum</h3>
+            <select id="museumSelect" onchange="updatePrices()">
+                <option value="">-- Select Museum --</option>
+            </select>
+
+            <h3>Select Date</h3>
+            <input type="date" id="visitDate" />
+
+            <h3>Select Time Slot</h3>
+            <div class="time-slots" id="slots">
+                <div class="slot available" data-time="10:00 AM">10:00 AM Opening Time</div>
+                <div class="slot available" data-time="11:00 AM">11:00 AM</div>
+                <div class="slot available" data-time="12:00 PM">12:00 PM</div>
+                <div class="slot available" data-time="01:00 PM">01:00 AM</div>
+                <div class="slot available" data-time="02:00 PM">02:00 AM</div>
+                <div class="slot available" data-time="03:00 PM">03:00 AM</div>
+                <div class="slot available" data-time="04:00 PM">04:00 AM</div>
+                <div class="slot booked">05:30 PM closing Time</div>
+            </div>
+
+            <button class="btn-next" onclick="goToStep(2)">Next →</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-content" id="step2">
+            <h3>Choose Ticket Types</h3>
+            <table class="ticket-table">
+                <tr>
+                    <td>Indian Adult (₹<span id="priceAdult">0</span>)</td>
+                    <td><input type="number" min="0" value="0" id="countAdult" onchange="updatePartialAmount()"></td>
+                    <td class="amount" id="amtAdult">₹0</td>
+                </tr>
+                <tr>
+                    <td>Child (₹<span id="priceChild">0</span>)</td>
+                    <td><input type="number" min="0" value="0" id="countChild" onchange="updatePartialAmount()"></td>
+                    <td class="amount" id="amtChild">₹0</td>
+                </tr>
+                <tr>
+                    <td>Student (₹<span id="priceStudent">0</span>)</td>
+                    <td><input type="number" min="0" value="0" id="countStudent" onchange="updatePartialAmount()"></td>
+                    <td class="amount" id="amtStudent">₹0</td>
+                </tr>
+                <tr>
+                    <td>Foreigner (₹<span id="priceForeigner">0</span>)</td>
+                    <td><input type="number" min="0" value="0" id="countForeigner" onchange="updatePartialAmount()">
+                    </td>
+                    <td class="amount" id="amtForeigner">₹0</td>
+                </tr>
+            </table>
+
+            <button class="btn-next" onclick="goToStep(3)">Next →</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-content" id="step3">
+            <h3>Contact Information</h3>
+            <input type="text" id="name" placeholder="Your Full Name" />
+            <input type="email" id="email" placeholder="Email Address" />
+            <input type="tel" id="phone" placeholder="Phone Number" />
+            <button class="btn-next" onclick="goToStep(4)">Next →</button>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-content" id="step4">
+            <h3>Payment & Confirmation</h3>
+            <p>Select Payment Method:</p>
+            <select>
+                <option>UPI</option>
+                <option>Net Banking</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+            </select>
+            <p>Total amount: ₹<span id="totalAmount">0</span></p>
+            <button class="btn-next" onclick="submitBooking()">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script>
+        const museumPrices = {
+            AndhraPradesh: {
+                "Visakha Museum": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Bapu Museum": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Amaravati Archaeological Museum": { adult: 20, child: 10, student: 10, foreigner: 80 }
+            },
+            ArunachalPradesh: {
+                "Jawaharlal Nehru State Museum": { adult: 20, child: 10, student: 15, foreigner: 100 },
+                "Craft Centre and Museum": { adult: 30, child: 15, student: 15, foreigner: 120 }
+            },
+            Assam: {
+                "Assam State Museum": { adult: 50, child: 20, student: 25, foreigner: 200 },
+                "Srimanta Sankaradeva Kalakshetra": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Kamakhya Museum": { adult: 30, child: 10, student: 15, foreigner: 120 }
+            },
+            Bihar: {
+                "Bihar Museum": { adult: 60, child: 25, student: 30, foreigner: 250 },
+                "Patna Museum": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Nalanda Archaeological Museum": { adult: 20, child: 10, student: 10, foreigner: 100 }
+            },
+            Chhattisgarh: {
+                "Mahant Ghasidas Museum": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Purkhouti Muktangan": { adult: 25, child: 10, student: 10, foreigner: 80 },
+                "Bastar Tribal Museum": { adult: 20, child: 10, student: 10, foreigner: 70 }
+            },
+            Goa: {
+                "Goa State Museum": { adult: 20, child: 10, student: 10, foreigner: 100 },
+                "Naval Aviation Museum": { adult: 50, child: 20, student: 25, foreigner: 200 },
+                "Houses of Goa Museum": { adult: 40, child: 15, student: 20, foreigner: 150 }
+            },
+            Gujarat: {
+                "Baroda Museum and Picture Gallery": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Kutch Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Lothal Archaeological Museum": { adult: 20, child: 10, student: 10, foreigner: 100 }
+            },
+            Haryana: {
+                "Sri Krishna Museum": { adult: 25, child: 10, student: 15, foreigner: 80 },
+                "Haryana State Museum": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Museum of Folk and Tribal Art": { adult: 40, child: 15, student: 20, foreigner: 150 }
+            },
+            HimachalPradesh: {
+                "Shimla State Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Bhuri Singh Museum": { adult: 20, child: 10, student: 10, foreigner: 80 },
+                "Kangra Art Museum": { adult: 25, child: 10, student: 15, foreigner: 100 }
+            },
+            Jharkhand: {
+                "Ranchi State Museum": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Tribal Research Institute Museum": { adult: 20, child: 10, student: 10, foreigner: 80 }
+            },
+            Karnataka: {
+                "Visvesvaraya Industrial Museum": { adult: 60, child: 20, student: 30, foreigner: 200 },
+                "Government Museum Bengaluru": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "HAL Heritage Centre and Aerospace Museum": { adult: 50, child: 20, student: 25, foreigner: 200 }
+            },
+            Kerala: {
+                "Napier Museum": { adult: 50, child: 20, student: 25, foreigner: 200 },
+                "Kerala Folklore Museum": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Hill Palace Museum": { adult: 30, child: 10, student: 15, foreigner: 120 }
+            },
+            MadhyaPradesh: {
+                "Manav Sangrahalaya": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "State Museum Bhopal": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Central Museum Indore": { adult: 25, child: 10, student: 10, foreigner: 100 }
+            },
+            Maharashtra: {
+                "Chhatrapati Shivaji Museum": { adult: 60, child: 25, student: 30, foreigner: 250 },
+                "Dr. Bhau Daji Lad Museum": { adult: 30, child: 10, student: 20, foreigner: 200 },
+                "Raja Dinkar Kelkar Museum": { adult: 50, child: 20, student: 25, foreigner: 200 }
+            },
+            Manipur: {
+                "Manipur State Museum": { adult: 30, child: 10, student: 15, foreigner: 120 }
+            },
+            Meghalaya: {
+                "Don Bosco Museum": { adult: 50, child: 20, student: 25, foreigner: 200 }
+            },
+            Mizoram: {
+                "Tribal Museum Aizawl": { adult: 20, child: 10, student: 10, foreigner: 80 }
+            },
+            Nagaland: {
+                "Nagaland State Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Kisama Heritage Museum": { adult: 25, child: 10, student: 10, foreigner: 100 }
+            },
+            Odisha: {
+                "Odisha State Museum": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Tribal Museum Bhubaneswar": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Konark Museum": { adult: 20, child: 10, student: 10, foreigner: 100 }
+            },
+            Punjab: {
+                "Punjab State Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Partition Museum Amritsar": { adult: 50, child: 20, student: 25, foreigner: 200 },
+                "Maharaja Ranjit Singh War Museum": { adult: 40, child: 15, student: 20, foreigner: 150 }
+            },
+            Rajasthan: {
+                "Albert Hall Museum": { adult: 50, child: 20, student: 25, foreigner: 300 },
+                "City Palace Museum Udaipur": { adult: 70, child: 30, student: 35, foreigner: 350 },
+                "Mehrangarh Fort Museum": { adult: 60, child: 25, student: 30, foreigner: 300 }
+            },
+            Sikkim: {
+                "Namgyal Institute of Tibetology": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Sikkim Himalayan Museum": { adult: 20, child: 10, student: 10, foreigner: 80 }
+            },
+            TamilNadu: {
+                "Government Museum Chennai": { adult: 50, child: 20, student: 25, foreigner: 200 },
+                "DakshinaChitra Museum": { adult: 60, child: 25, student: 30, foreigner: 250 },
+                "Fort St. George Museum": { adult: 30, child: 10, student: 15, foreigner: 120 }
+            },
+            Telangana: {
+                "Salar Jung Museum": { adult: 50, child: 20, student: 30, foreigner: 200 },
+                "State Museum Hyderabad": { adult: 40, child: 15, student: 25, foreigner: 150 },
+                "Sudha Car Museum": { adult: 60, child: 25, student: 30, foreigner: 250 }
+            },
+            Tripura: {
+                "Tripura State Museum": { adult: 30, child: 10, student: 15, foreigner: 100 },
+                "Ujjayanta Palace Museum": { adult: 40, child: 15, student: 20, foreigner: 150 }
+            },
+            UttarPradesh: {
+                "State Museum Lucknow": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Sarnath Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Allahabad Museum": { adult: 35, child: 15, student: 20, foreigner: 150 }
+            },
+            Uttarakhand: {
+                "Uttarakhand State Museum": { adult: 30, child: 10, student: 15, foreigner: 120 },
+                "Forest Research Institute Museum": { adult: 50, child: 20, student: 25, foreigner: 200 }
+            },
+            WestBengal: {
+                "Indian Museum Kolkata": { adult: 50, child: 20, student: 25, foreigner: 250 },
+                "Victoria Memorial Hall": { adult: 60, child: 25, student: 30, foreigner: 300 },
+                "Birla Industrial & Technological Museum": { adult: 40, child: 15, student: 20, foreigner: 150 }
+            },
+            Delhi: {
+                "National Museum": { adult: 50, child: 20, student: 30, foreigner: 250 },
+                "National Rail Museum": { adult: 40, child: 15, student: 20, foreigner: 150 },
+                "Crafts Museum": { adult: 30, child: 10, student: 15, foreigner: 120 }
+            }
+        };
+
+        const slots = document.querySelectorAll('.slot');
+        let selectedSlot = null;
+
+        slots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                if (!slot.classList.contains('booked')) {
+                    slots.forEach(s => s.classList.remove('selected'));
+                    slot.classList.add('selected');
+                    selectedSlot = slot.dataset.time;
+                }
+            });
+        });
+
+        function updateMuseumOptions() {
+            const state = document.getElementById("stateSelect").value;
+            const museumSelect = document.getElementById("museumSelect");
+            museumSelect.innerHTML = '<option value="">-- Select Museum --</option>';
+
+            if (state && museumPrices[state]) {
+                for (let museum in museumPrices[state]) {
+                    const opt = document.createElement("option");
+                    opt.value = museum;
+                    opt.innerText = museum;
+                    museumSelect.appendChild(opt);
+                }
+            }
+        }
+
+        function updatePrices() {
+            const state = document.getElementById("stateSelect").value;
+            const museum = document.getElementById("museumSelect").value;
+
+            if (museumPrices[state] && museumPrices[state][museum]) {
+                const prices = museumPrices[state][museum];
+                document.getElementById("priceAdult").innerText = prices.adult;
+                document.getElementById("priceChild").innerText = prices.child;
+                document.getElementById("priceStudent").innerText = prices.student;
+                document.getElementById("priceForeigner").innerText = prices.foreigner;
+
+                updatePartialAmount();
+            }
+        }
+
+        function updatePartialAmount() {
+            const state = document.getElementById("stateSelect").value;
+            const museum = document.getElementById("museumSelect").value;
+            const prices = museumPrices[state][museum];
+
+            const countAdult = parseInt(document.getElementById("countAdult").value) || 0;
+            const countChild = parseInt(document.getElementById("countChild").value) || 0;
+            const countStudent = parseInt(document.getElementById("countStudent").value) || 0;
+            const countForeigner = parseInt(document.getElementById("countForeigner").value) || 0;
+
+            document.getElementById("amtAdult").innerText = "₹" + (countAdult * prices.adult);
+            document.getElementById("amtChild").innerText = "₹" + (countChild * prices.child);
+            document.getElementById("amtStudent").innerText = "₹" + (countStudent * prices.student);
+            document.getElementById("amtForeigner").innerText = "₹" + (countForeigner * prices.foreigner);
+        }
+
+        function goToStep(stepNum) {
+            const steps = document.querySelectorAll(".step");
+            const contents = document.querySelectorAll(".step-content");
+
+            if (stepNum === 2) {
+                const state = document.getElementById("stateSelect").value;
+                const museum = document.getElementById("museumSelect").value;
+                const date = document.getElementById("visitDate").value;
+
+                if (!state || !museum || !date || !selectedSlot) {
+                    alert("Please fill all fields in Step 1");
+                    return;
+                }
+            }
+
+            steps.forEach((s, i) => s.classList.toggle("active", i === stepNum - 1));
+            contents.forEach((c, i) => c.classList.toggle("active", i === stepNum - 1));
+
+            if (stepNum === 4) {
+                const state = document.getElementById("stateSelect").value;
+                const museum = document.getElementById("museumSelect").value;
+                const prices = museumPrices[state][museum];
+
+                const countAdult = parseInt(document.getElementById("countAdult").value) || 0;
+                const countChild = parseInt(document.getElementById("countChild").value) || 0;
+                const countStudent = parseInt(document.getElementById("countStudent").value) || 0;
+                const countForeigner = parseInt(document.getElementById("countForeigner").value) || 0;
+
+                const total = (countAdult * prices.adult) + (countChild * prices.child) +
+                    (countStudent * prices.student) + (countForeigner * prices.foreigner);
+
+                document.getElementById("totalAmount").innerText = total;
+            }
+        }
+
+        function submitBooking() {
+            alert("✅ Booking confirmed!");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Manipur</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">MANIPUR</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>RKCS MUSEUM</h1>
+          <p>
+            RKCS Art Museum and Gallery is a prestigious art institution in the Indian Northeastern state of Manipur,
+            Exhibiting historical, art and culture of Manipur in paintings. These paintings are original paintings of
+            Manipur's legendary Artist Rajkumar Chandrajit Sana (RKCS). RKCS have also been mentioned in the Limca Book
+            of Records, 1994 and have received several prestigious awards.RKCS Art Gallery was Inaugurated by Governor
+            of Orissa MS Rajendran in 2004 formally. Other collection of gallery includes contemporary art works, art
+            installation, movie vintage posters. Don't miss out when you are in Imphal. You won't regret visiting here
+            in RKCS art gallery take home with the memory of Manipuri and it's people. Happy Learning while Travelling!!
+          </p>
+          <div id="image">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c6/d9/44/the-museum.jpg?w=700&h=-1&s=1"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            Manipur, a state in northeastern India, has a rich cultural and historical heritage. The region is known for
+            its diverse indigenous communities and their unique traditions. Museums in Manipur often showcase the
+            state's cultural, artistic, and historical aspects.
+          </P>
+          <div id="image">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e0/6d/41/tourist-team-from-usa.jpg?w=1000&h=-1&s=1"
+              height="318px" width="500px">
+          </div>
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://th.bing.com/th/id/OIP.RDb8yKF_x_eOiin020uSEQAAAA?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+
+            <img
+              src='https://static2.tripoto.com/media/filter/nl/img/645020/TripDocument/1562006401_img_20190305_wa0010_1_1024x512.jpg'
+              height='200px' width="'400px">
+            <img src='https://pbs.twimg.com/media/FSIpGf7VsAE5r0g?format=jpg&name=large' height='200px' width="'400px">
+          </div>
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 10AM and closes at 5PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.9817109188957!2d93.93339667519794!3d24.796079777971382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3749264fb48ecf0d%3A0x43226a0925b6af1e!2sRKCS%20Art%20Gallery%20And%20Museum!5e0!3m2!1sen!2sin!4v1749337517283!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Rkcs Colony, Nambul River Rd, Keishamthong, Imphal, Manipur 795001
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

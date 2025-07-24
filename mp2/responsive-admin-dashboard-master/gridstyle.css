@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e6e8ed;
+  color: #666666;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, #80b9cb, #35474b);
+}
+
+.header {
+  grid-area: header;
+  color: #38393c;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Adjusted for clarity */
+  /* Header fade-in animation */
+  animation: fadeIn 1s ease-in;
+  background: linear-gradient(to right, #80b9cb, #35474b);
+}
+
+.button {
+  background-color: #ad5858;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: linear-gradient(to right, #80b9cb, #35474b);
+  /* Smooth transition for hover */
+}
+
+/* Button hover animation */
+.button:hover {
+  transform: scale(1.1);
+  /* Slight scale-up on hover */
+  background-color: #944949;
+  /* Darken button on hover */
+}
+
+a {
+  margin-right: 140px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.head {
+  margin-left: 90px;
+}
+
+h4 {
+  color: black;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+p {
+  color: rgb(40, 37, 37);
+  padding: 5px;
+  margin: 0;
+}
+
+img {
+  height: 80%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card {
+  background-color: white;
+  color: white;
+  height: 26rem;
+  width: 23rem;
+  text-align: center;
+  box-shadow: 5px 7px #d7cbcb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for hover */
+  /* Card load animation with slight delay for staggered effect */
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Stagger animation for cards */
+.cards .card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cards .card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cards .card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cards .card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.cards .card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.cards .card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.cards .card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.cards .card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.cards .card:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.cards .card:nth-child(10) {
+  animation-delay: 1s;
+}
+
+/* Add more nth-child rules as needed for all cards */
+
+.card:hover {
+  transform: translateY(-10px);
+  /* Lift card on hover */
+  box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: red;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+  animation: pulse 2s infinite;
+  /* Pulse animation for attention */
+}
+
+/* Show animation for top button */
+#myBtn.show {
+  animation: fadeIn 0.5s ease-in;
+  /* Fade in when button appears */
+}
+
+#myBtn:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */
+  animation-play-state: paused;
+  /* Pause pulse on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+.card h4,
+.card p {
+  transition: transform 0.3s ease;
+}
+
+.card:hover h4 {
+  transform: translateY(-5px);
+}
+
+.card:hover p {
+  transform: translateY(-3px);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}

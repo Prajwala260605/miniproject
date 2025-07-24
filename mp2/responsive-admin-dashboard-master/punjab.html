@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Punjab</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">PUNJAB</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>THE PARTITION MUSEUM</h1>
+          <p>
+            The Partition Museum is a public museum located in the town hall of Amritsar, Punjab, India. The museum aims
+            to become the central repository of stories, materials, and documents related to the post-partition riots
+            that followed the division of British India into two independent dominions: India and Pakistan. The museum
+            also focuses on the history of the “anti-colonial movement, the Jallianwala Bagh massacre, the Komagata Maru
+            incident, the All India Muslim League and the Indian National Congress, and the journey of resilience and
+            recuperation for women”. The building wherein the museum is located in Amritsar was also “once the British
+            headquarters and a jail”. The museum was inaugurated on 25 August 2017.
+          </p>
+          <div id="image">
+            <img
+              src="https://www.holidify.com/images/cmsuploads/compressed/amritsar-partition-hindustan-partition-amritsar-survived-bloodshed_45a9af0e-8292-11e7-aa81-8a4dce36eef3_20171211205434.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            In 1947, British India was divided into India and Pakistan. The partition lines, drawn on a map by the
+            British lawyer Cyril Radcliffe, divided the province of Punjab and Bengal into two parts on the basis of
+            religion. As a result, millions of people found themselves on the wrong side of the border overnight.
+            According to various estimates, more than 800,000 Muslims, Hindus, and Sikhs were killed in the riots that
+            followed the partition between August 1947 to January 1948. Additionally, more than 1,400,000 people became
+            refugees.
+
+            The Government of Punjab founded this museum with The Arts and Cultural Heritage Trust of the United Kingdom
+            as a way to memorialize those who were affected by the partition. Therefore, the museum documents the
+            catastrophic history of migration, loss of life and livelihood through testimonies of the first-generation
+            partition survivors and their lived experiences.
+
+            Based on extensive oral testimonies from individuals who witnessed the partition, the experiences of their
+            family members, and material memories (the various objects that individuals managed to migrate with - be it
+            jewelleries, clothes, or cooking utensils), the museum provides a platform for the younger generations to
+            know the aftermath of what has been dubbed as one of the cataclysmic events in the recent history of the
+            Indian subcontinent. The museum acts as a reminder of not only the millions of individuals who lost their
+            lives owing to violence as a result of the Partition of India but also one of resilience as many individuals
+            despite finding themselves in challenging circumstances turned their lives around and contributed in their
+            own ways towards the cause of nation-building.
+
+            Mallika Ahluwalia, the Managing Trustee and co-founder of the Partition Museum, has documented some of the
+            notable stories of individuals in her book titled Divided by Partition, United by Resilience: 21
+            Inspirational Stories from 1947 (2018).
+          </P>
+
+
+
+          <div>
+
+            <h1>COLLECTIONS</h1>
+
+
+            <img src='https://mainlymuseums.com/images/posts/931/Original-IMG_20191018_121504.jpg' height='200px'
+              width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.Qb4TNCDAgfnsMeb0G-8VegHaFi?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+
+
+            <img src='https://i.pinimg.com/originals/fb/40/73/fb4073434009f003909be9018fee28b4.jpg' height='200px'
+              width="'400px">
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 10AM and closes at 6PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.297858653813!2d74.8764083754555!3d31.62569407416583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39197cab9b7d4cdb%3A0x11b099790ffc0924!2sThe%20Partition%20Museum!5e0!3m2!1sen!2sin!4v1749337850805!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              10, Street Number 6C, Vikas Nagar, Shori Nagar, Amritsar, Punjab
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

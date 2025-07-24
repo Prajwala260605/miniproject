@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rajasthan</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">RAJASTHAN</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>ALBERT HALL MUSEUM</h1>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Albert_Hall_%28_Jaipur_%29.jpg/330px-Albert_Hall_%28_Jaipur_%29.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <p>
+            The Albert Hall Museum in Jaipur is the oldest museum of the state and functions as the state museum of
+            Rajasthan, India. The building is situated in Ram Niwas garden outside the city wall opposite New gate and
+            is a fine example of Indo-Saracenic architecture. It is also called the Government Central Museum. It was
+            considered one of the best 19th century museums for the variety of its collections. It was renovated in 2008
+            and reopened as one of the most advanced museums in India.
+          </p>
+
+          <div>
+
+            <h1>COLLECTIONS</h1>
+
+
+            <img src='https://www.futureview360.com/wp-content/uploads/2019/05/albert-hall-museum-inside.jpg'
+              height='200px' width="'400px">
+
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Albert_Hall_Museum_Jaipur_%22Mummy%22_01.jpg/330px-Albert_Hall_Museum_Jaipur_%22Mummy%22_01.jpg'
+              height='218px' width="'400px">
+
+            <img src='https://www.travels2rajasthan.com/uploads/32965_Albert%20Hall%20Museum%20Panting.jpg'
+              height='218px' width="'400px">
+          </div>
+
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>09:00 - 17:30,
+              18:30 - 21:00</P>
+            <p>
+              every monday closed
+            </p>
+          </div>
+
+
+          <div>
+            <h1>Address</Address>
+            </h1>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.745061572318!2d75.8168370752716!3d26.911584876647865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6b03af9295f%3A0x5bb4333133c6968!2sAlbert%20Hall%20Museum!5e0!3m2!1sen!2sin!4v1749337912191!5m2!1sen!2sin"
+              width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div>
+              <p>
+                Ram Niwas Garden, Jaipur, Rajasthan 302004
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

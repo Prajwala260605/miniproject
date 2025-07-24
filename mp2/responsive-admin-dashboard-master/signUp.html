@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Museum Hub</title>
+  <link rel="stylesheet" href="css/style3.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">INDIAN MUSEUM HUB</div>
+      <a href="home.html" class="auth">Back to Home</a>
+    </header>
+
+    <main>
+      <div class="signup-form">
+        <h1>Sign Up</h1>
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+        <button class="signup-btn">Sign Up</button>
+
+        <div class="google-signup">
+          <a href="http://localhost:5000/auth/google" class="google-btn">
+            <img src="https://www.google.com/favicon.ico" alt="Google Icon" class="google-icon" />
+            Sign In with Google
+          </a>
+        </div>
+
+        <p class="login-link">
+          Already have an account? <a href="signin.html">Login here</a>
+        </p>
+      </div>
+
+      <div class="circle signup-circle">
+        <img src="newImag/signUpC.jpg" alt="Art Sign Up" />
+      </div>
+    </main>
+  </div>
+
+  <!-- ✅ Signup Script -->
+  <script>
+    document.querySelector('.signup-btn').addEventListener('click', async () => {
+      const name = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      // 🔒 Validations
+      if (!name || !email || !password) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      if (!email.endsWith('@gmail.com')) {
+        alert('Email must be a @gmail.com address.');
+        return;
+      }
+      if (password.length <= 3) {
+        alert('Password must be more than 3 characters.');
+        return;
+      }
+
+      // 📡 Send to backend
+      try {
+        const response = await fetch('http://localhost:5000/auth/signup', {
+          method: 'POST',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert('Signup successful!');
+          window.location.href = 'signin.html'; // ✅ redirect to login page
+        } else {
+          alert(data.message || 'Signup failed');
+        }
+      } catch (error) {
+        console.error('Signup error:', error);
+        alert('Signup failed. Please try again.');
+      }
+    });
+  </script>
+</body>
+
+</html>

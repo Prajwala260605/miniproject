@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Telangana</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">TELANGANA</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>SALAR JUNG MUSEUM</h1>
+          <p>The Salar Jung Museum is an art museum located at Dar-ul-Shifa, on the southern bank of the Musi River in
+            the city of Hyderabad, Telangana, India. It is one of the notable National Museums of India. Originally a
+            private art collection of the Salar Jung family, it was endowed to the nation after the death of Salar Jung
+            III. It was inaugurated on 16 December 1951.
+
+            It has a collection of sculptures, paintings, carvings, textiles, manuscripts, ceramics, metallic artefacts,
+            carpets, clocks, and furniture from Japan, China, Burma, Nepal, India, Persia, Egypt, Europe, and North
+            America. It is one of the largest museums in the world.</p>
+          <div id="image">
+            <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/06/20184416/Salarjung-Museum.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>A nobleman of the Salar Jung family of Hyderabad, Nawab Mir Yousuf Ali Khan, Salar Jung III (1889–1949)
+            served as Prime Minister of Hyderabad during the Nizam's rule. He spent a substantial amount of his income,
+            over a period of thirty-five years, collecting artefacts from all across the world.
+
+
+            Inauguration of the Salar Jung Museum by Prime Minister Jawaharlal Nehru, c. 1951.
+            After the Nawab died in 1949, the collections were left behind in his ancestral palace Diwan Devdi. The
+            collection was formerly exhibited there as a private museum, named Salar Jung Museum, which was inaugurated
+            by Jawaharlal Nehru on 16 December 1951.
+
+          </P>
+          <h1>COLLECTIONS</h1>
+          <div>
+
+            <img src='https://salarjungmuseum.in/images/History6.jpg' height='100px' width="'150px">
+            <img src='https://salarjungmuseum.in/images/History7.jpg' height='100px' width="'150px">
+            <img src='https://salarjungmuseum.in/images/Kashmir/1(7).jpg' height='100px' width="'150px">
+            <img src='https://salarjungmuseum.in/images/Chinese/22.jpg' height='100px' width="'150px">
+            <img src='https://salarjungmuseum.in/images/European_Glass/1(2).jpg' height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/LakshmiNarayana_01.jpg/176px-LakshmiNarayana_01.jpg'
+              height='100px' width="'150px">
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 11AM and closes at 7PM,</P>
+          </div>
+          <div>
+            <p>every monday MUSEUM will not be opened.</p>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159973.69407812916!2d78.37435996583497!3d17.382818083366114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9787e263d7bb%3A0x353b934b9b69a041!2sSalar%20Jung%20Museum!5e0!3m2!1sen!2sin!4v1749338067269!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div>
+            <p>
+              Salar Jung Museum</p>
+          </div>
+          <div>
+            <p>Hyderabad 500002, Telangana State.</p>
+          </div>
+          <div>
+            <p>Phone: +91 40 24576443, 24523211, 13</p>
+          </div>
+          <div>
+            <p>Fax: +91 40 24572558</p>
+          </div>
+          <div>
+            <p>Email : salarjungmuseum1951@gmail.com
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

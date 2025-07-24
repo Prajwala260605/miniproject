@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Jammu & Kashmir</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item">
+          <a href="booking.html">
+            <span class="material-icons-outlined">confirmation_number</span> Book Tickets
+          </a>
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">JAMMU & KASHMIR</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>AMAR MAHAL MUSEUM</h1>
+          <p>
+            The Amar Mahal Palace is a palace in Jammu, in the Indian erstwhile Kingdom of Jammu and Kashmir, India. The
+            palace has now been converted into a museum. Commissioned by Maharaja Amar Singh, a Dogra king, the palace
+            was built in the nineteenth century by a French architect on the lines of a French Chateau. The palace was
+            donated to the Hari-Tara Charitable Trust by Karan Singh for use as a museum. It has many exhibits including
+            a golden throne weighing 120kg, a Pahari miniature, Kangra miniature paintings, a library of 25,000 antique
+            books, many rare art collections, and a large collection of portraits of the royal family.
+
+            The palace was the last official residence of the Dogra dynasty and the last king of the kingdom Maharaja
+            Hari Singh.
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Amar_Mahal_Museum%2C_Jammu.jpg/375px-Amar_Mahal_Museum%2C_Jammu.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            The Amar Mahal Palace was planned by a French architect, in 1862. However, it was not built until the 1890s.
+            Maharani Tara Devi, wife of the late Maharaja Hari Singh (son of Raja Amar Singh) lived in this palace till
+            her death in 1967. Subsequently, her son Karan Singh and his wife Yasho Rajya Lakshmi converted the palace
+            into a museum to house rare books and works of art, with the objective of "Encouraging artistic talent, to
+            establish fine arts centre and to collaborate with other like minded institutions for promotion of Indian
+            arts". For this purpose, they transferred the palace property to a trust named as the "Hari-Tara Charitable
+            Trust". Karan Singh voluntarily surrendered the Privy Purse paid to him by the Government of India as a
+            former ruler of Jammu, one of the Princely state of India, and used the funds to set up this museum named in
+            memory of his parents.
+
+            The museum was inaugurated by the Indira Gandhi, Prime Minister of India, on 13 April 1975. To promote the
+            stated objectives, the Trust arranges guided tours, book readings, lectures, film shows and hobby classes
+            and other visitor friendly activities in the Museum. Scholarly exchanges, workshops and exhibitions are also
+            regular features held by the Trust. The Dogra-Pahari paintings displayed in the museum were creation of the
+            second half of the 18th century in Jammu and Himachal Pradesh of the Kangra school of art. To quote the
+            words of Karan Singh: "The whole effect is to transport one into a fascinating miniature world with its own
+            aura and ethos.
+          </P>
+          <h1>GEOGRAPHY</h1>
+          <P>
+            The palace built in red sandstone with red bricks is in a picturesque environment on a hillock overlooking
+            the Tawi river valley. Built in the European castle style, the palace has sloping roofs with turrets and
+            tall towers. When built during the reign of Raja Amar Singh, it was the tallest building in Jammu. The
+            imposing building has long passages on three sides, which are covered by sloping corrugated tin roofs. The
+            passages are supported on columns with wooden framework. The first floor of the palace building has French
+            windows with connected balcony. The top floor has a bay window. The windows also depict triangular
+            projections in classical Greek architectural style, which are fitted over ornate false columns.
+
+            Displays
+          </P>
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://upload.wikimedia.org/wikipedia/commons/a/a2/Nala_Damayanti.jpg' height='200px'
+              width="'400px">
+
+            <img src='https://media-cdn.tripadvisor.com/media/photo-o/09/4a/9f/90/amar-mahal-palace-museum.jpg'
+              height='200px' width="'400px">
+            <img src='https://roamingpirates.com/wp-content/uploads/2023/01/Queens-bed-at-Amar-Mahal-Palace-768x548.jpg'
+              height='200px' width="'400px">
+          </div>
+          <h1>DISPLAYS</h1>
+          <p>
+            Only four rooms of the palace are open depicting Pahari paintings of Mahabharata epic scenes and royal
+            memorabilia. A golden sofa of the Dogra rulers, weighing 120 kg in pure gold, embedded with golden lions at
+            the corners, is housed in a hexagonal room in the museum, which is viewed only through glass covered window
+            panes as the main door is kept locked for security reasons. The art works of some of the renowned Indian
+            artists like M.F. Hussain, J.Swaminathan, G. R. Santosh, Bikash Battacharjee, Ram Kumar, Laxman Pai are also
+            on display in the museum.[9] In one of the galleries, paintings of Hindu epic stories such as of Nala
+            Damayanti (a set of forty-seven miniature paintings) are depicted. Modern version of the Dashavatara
+            paintings (ten avatars of Hindu god Vishnu) are also displayed in a separate ante-chamber in the Museum.
+            These are unusual modern art set of paintings. Family portraits of the Dogra rulers of Jammu and Kashmir are
+            on display in the Durbar Hall at the entrance gallery. In the first and second floors, a few chambers house
+            the library, which has a collection of rare antique books (25,000) on religion, philosophy and political
+            science to fiction.
+
+            An exclusive chamber in the museum, once the living quarters of the Maharani (later called the Maharajmata)
+            Tara Devi, is conserved and exhibited in its original form where a silver bedspread, period furniture,
+            photographs, the decoration of the Crown of India which was presented to her in 1945, her personal items of
+            clothing and the unique Victorian bath room are on display.
+          </p>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 10AM and closes at 5PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.679134505617!2d74.86971777550313!3d32.747709773675965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e84778bb4030f%3A0xb2ebe51a9e1da4bc!2sAmar%20Mahal%20Museum%20and%20Library!5e0!3m2!1sen!2sin!4v1749337148470!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Palace Road, Jammu, Jammu and Kashmir (State) 180001
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

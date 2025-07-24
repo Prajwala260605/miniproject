@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Maharastra</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">MAHARASTRA</p>
+      </div>
+      <div class="page" class="maha">
+
+        <div class="content">
+          <h1>Chatrapati shivaji maharaj vastu sangrahalaya</h1>
+          <p>
+            Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, (CSMVS) originally named Prince of Wales Museum of Western
+            India, is a museum in Mumbai (Bombay) which documents the history of India from prehistoric to modern times.
+
+            It was founded during British rule of India in the early years of the 20th century by prominent citizens of
+            the city then called Bombay, with the help of the government, to commemorate the visit of the Prince of
+            Wales (later George V, king of the United Kingdom and emperor of India). It is located in the heart of South
+            Mumbai near the Gateway of India. The museum was renamed in 1998 after Chhatrapati Shivaji Maharaj, the
+            founder of the Maratha Empire.
+
+            The building is built in the Indo-Saracenic style of architecture, incorporating elements of other styles of
+            architecture like the Mughal, Maratha and Jain. The museum building is surrounded by a garden of palm trees
+            and formal flower beds.
+
+            The museum houses approximately 50,000 exhibits of ancient Indian history as well as objects from foreign
+            lands, categorised primarily into three sections: Art, Archaeology and Natural History. The museum houses
+            Indus Valley civilization artefacts, and other relics from ancient India from the time of the Guptas,
+            Mauryas, Chalukyas and Rashtrakuta.
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya.jpg/375px-Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            In 1904, some leading citizens of Bombay decided to provide a museum to commemorate the visit of the Prince
+            of Wales, the future King George V. On 14 August 1905, the committee passed a resolution saying:
+
+
+            'Statue of The Prince of Wales, who became the Emperor, George Vth, later
+            "The museum building embodies the pomp and height at which the British raj was moving ahead with their
+            ambitious plans, in building the great metropolis Bombay". "In keeping pace with the best style of local
+            architecture, many buildings were built, among which, Bombay High Court building, and later, Gateway of
+            India buildings were the most notable ones".
+
+
+            On two sides of the statue has mural type of stone carving depicting the POW inaugurating the museum
+            The foundation stone was laid by the Prince of Wales on 11 November 1905 and the museum was formally named
+            "Prince of Wales Museum of Western India". On 1 March 1907, the government of the Bombay Presidency granted
+            the museum committee a piece of land called the "Crescent Site", where the museum now stands. Following an
+            open design competition, in 1909 the architect George Wittet was commissioned to design the Museum building.
+            Wittet had already worked on the design of the General Post Office and in 1911 would design one of Mumbai's
+            most famous landmarks, the Gateway of India.
+
+            The museum was funded by the Royal Visit (1905) Memorial Funds. Additionally, the Government and the
+            Municipality granted Rs. 300,000 and Rs. 250,000 respectively. Sir Currimbhoy Ibrahim (first Baronet)
+            donated another Rs. 300,000 and Sir Cowasji Jehangir gave Rs. 50,000. The Museum was established under
+            Bombay Act No. III of 1909. The museum is now maintained by annual grants from the Government and the Bombay
+            Municipal Corporation. The latter pays for these grants from the interest accruing on the funds at the
+            disposal of the Trust of the Museum.
+
+            The museum building was completed in 1915, but was used as a Children's Welfare Centre and a Military
+            Hospital during the First World War, before being handed over to the committee in 1920. The Prince of Wales
+            Museum was inaugurated on 10 January 1922, by Lady Lloyd, the wife of George Lloyd, Governor of Bombay.
+
+            The museum building is a Grade I Heritage Building of the city and was awarded first prize (Urban Heritage
+            Award) by the Bombay Chapter of the Indian Heritage Society for heritage building maintenance in 1990. In
+            1998 the Museum was renamed Chhatrapati Shivaji Maharaj Vastu Sangrahalaya after the warrior king and
+            founder of the Maratha Empire, Shivaji. The museum was renamed after the renaming of the city in 1995, when
+            the colonial name "Bombay" was replaced by the native "Mumbai".
+          </P>
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://csmvs.in/wp-content/uploads/2024/02/22.939.jpg' height='200px' width="'400px">
+            <img src='https://csmvs.in/wp-content/uploads/2024/02/22.937.jpg' height='200px' width="'400px">
+            <img src='https://csmvs.in/wp-content/uploads/2024/01/33.1221.jpg' height='200px' width="'400px">
+            <img src='https://csmvs.in/wp-content/uploads/2024/01/22.607.jpg' height='200px' width="'400px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/LakshmiNarayana_01.jpg/176px-LakshmiNarayana_01.jpg'
+              height='100px' width="'150px">
+          </div>
+
+          <h1>ARCHITECTURE</h1>
+          <p>
+            The museum building is situated in 3 acres (12,000 m2) area, having a built up area of 12,142.23m sq. It is
+            surrounded by a garden of palm trees and formal flower beds.
+
+            The museum building, built of locally quarried grey Kurla basalt and buff coloured trachyte Malad stone. It
+            is a three-storied rectangular structure, capped by a dome set upon a base, which adds an additional storey
+            in the centre of the building. Built in the Western Indian and Indo-Saracenic style of architecture, the
+            building accommodates a central entrance porch, above which rises a dome, tilled and modified well "tiled in
+            white and blue flecks, supported on a lotus - petal base". A cluster of pinnacles, topped with miniature
+            domes surround the central dome. The building incorporates features like Islamic dome with a finial along
+            with protruding balconies and inlaid floors, inspired by Mughal palace architecture. The architect, George
+            Wittet, modelled the dome on that of Golconda Fort and the inner vaulting arches on those at the Gol Gumbaz
+            in Bijapur. The interior of the museum combines the columns, railings and balcony of an 18th-century Wada (a
+            Maratha mansion) with Jain style interior columns, which form the main body of the central pavilion below
+            the Maratha balcony.
+
+            In its recent modernisation programme (2008), the museum created 30,000 sq ft (2,800 m2) space for
+            installation of five new galleries, a conservation studio, a visiting exhibition gallery and a seminar room,
+            in the East Wing of the Museum. The museum also houses a library.
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Prince_of_Wales_Museum_lobby.JPG/300px-The_Prince_of_Wales_Museum_lobby.JPG"
+              height="318px" width="500px">
+          </div>
+          <h1>SCULPTURE GALLERY</h1>
+          <div>
+            <P>The archaeological collections were originally started by pioneering archaeologists Sir Henry Cousens and
+              Sir John Marshall. Amongst the important sculptures are the Gupta period terracottas and bricks from
+              Mirpurkhas excavated by Cousens, a large number of Buddhist images from Gandhara and ceiling panels from a
+              dilapidated temple at Aihole. The early examples are from Pauni and Pitalkhora. Mumbai itself has a rich
+              tradition exemplified by the colossal Parel Relief of Shiva (represented here by a cast) and a Matrika
+              from Baijanath Temple at Sewri near Parel belonging to the same phase as Elephanta. Other noteworthy
+              images from Maharashtra are a Vishnu and a Ganesha of the eleventh century CE. Some well known sculptures
+              are:
+
+              Brahma, from Elephanta Caves
+              Mahishasuramardini, from Elephanta
+              Parel Relief of Shiva (plaster cast) from Parel
+              Sculptures from Aihole and Pattadakal
+              Dvarapala, from Shamalji, Gujarat
+              Garuda, from the Konark Sun Temple
+              Yaksha, from Pitalkhora
+              Buddha and Devotee from Mirpur Khas
+              Ashthamahesha Replica bust</P>
+          </div>
+          <h1>TIMINGS</h1>
+          <div>
+            <p>OPENS AT 11:00 AND CLOSES AT 6:00</p>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.101487604767!2d72.83011667502355!3d18.92690148224727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c3eaf8b127%3A0x44e72610553e9253!2sChhatrapati%20Shivaji%20Maharaj%20Vastu%20Sangrahalaya!5e0!3m2!1sen!2sin!4v1749337455342!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              159-161, Mahatma Gandhi Road, Lion Gate, Fort, Mumbai, Maharashtra 400023
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

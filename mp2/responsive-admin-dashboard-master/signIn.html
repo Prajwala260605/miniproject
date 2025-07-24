@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - Museum Hub</title>
+  <link rel="stylesheet" href="css/style3.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">INDIAN MUSEUM HUB</div>
+      <a href="home.html" class="auth">Back to Home</a>
+    </header>
+
+    <main>
+      <div class="signin-form">
+        <h1>Sign In</h1>
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username or Email" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+        <button class="signin-btn">Login / Sign In</button>
+
+        <div class="google-signup">
+          <a href="http://localhost:5000/auth/google" class="google-btn">
+            <img src="https://www.google.com/favicon.ico" alt="Google Icon" class="google-icon" />
+            Sign In with Google
+          </a>
+        </div>
+
+        <p class="signup-link">
+          Don't have an account? <a href="signup.html">Sign up here</a>
+        </p>
+      </div>
+
+      <div class="circle signin-circle">
+        <img src="newImag/SignInCC.jpg" alt="Art Sign In" />
+      </div>
+    </main>
+  </div>
+
+  <!-- ✅ Load local signin logic -->
+  <script src="js/signin.js"></script>
+</body>
+
+</html>

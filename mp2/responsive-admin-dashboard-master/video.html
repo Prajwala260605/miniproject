@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tour</title>
+
+    <!-- Montserrat Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Inline CSS for video page styling -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://p.turbosquid.com/ts-thumb/CD/xjbdRr/3b/historical_gallery_interior_360/jpg/1743509432/1920x1080/turn_fit_q99/7d5d4735899c43eb8bb37b2f81c1da3d95782ab1/historical_gallery_interior_360-34.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 12px 12px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .video-container {
+            margin: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        video {
+            width: 100%;
+            height: 470px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #80b9cb;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #6099ab;
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .video-container {
+                margin: 20px;
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .back-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .header {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .video-container {
+                margin: 15px;
+                padding: 10px;
+                max-width: 95%;
+            }
+
+            .back-button {
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Video Tour</h1>
+    </header>
+
+    <div class="video-container">
+        <video controls autoplay loop>
+            <source src="videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag. Please try another browser or download the video.
+        </video>
+        <a href="index.html" class="back-button" aria-label="Back to VR Tour">
+            <span class="material-icons-outlined">arrow_back</span> Back to Home
+        </a>
+    </div>
+</body>
+
+</html>

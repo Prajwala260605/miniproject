@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Goa</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">GOA</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>MUSEUM OF CHRISTIAN ART</h1>
+          <p>The Museum of Christian Art in Goa stands as a testament to the intricate and diverse artistic heritage
+            associated with Christianity in the region. Goa, with its colonial history and influence, has been a melting
+            pot of cultures, and this museum seeks to preserve and showcase the artistic expressions of the Christian
+            community.</p>
+          <div id="image">
+            <img src="https://th.bing.com/th/id/OIP.oAhZrgI1e7AJDiXgd3IoUgHaFj?rs=1&pid=ImgDetMain" height="300px"
+              width="500px" alt="Paris" class="center">
+
+          </div>
+          <h1>HISTORY</h1>
+          <p>The museum could have been established with the goal of preserving and showcasing the rich Christian
+            artistic heritage in Goa.The museum may have started with a collection of artifacts, paintings, sculptures,
+            and other items of Christian art from different periods, sourced from local churches, institutions, or
+            private collections.If the museum has been successful, it might have expanded its collection and gained
+            recognition as a significant cultural institution in Goa.
+          </P>
+          <div>
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://museumofchristianart.com/media/object_image/01_Infant_Jesus_Saviour_of_the_World.jpg'
+              height='200px' width="'400px">
+            <img src='https://museumofchristianart.com/media/object_image/30_Portable_altar_Furniture_.png'
+              height='200px' width="'400px">
+            <img
+              src='https://museumofchristianart.com/media/object_image/21_The_Holy_Family_blessed_by_the_Holy_Trinity_.png'
+              height='200px' width="'400px">
+            <img src='https://museumofchristianart.com/media/object_image/25_Pectoral_cross_and_chain.png'
+              height='200px' width="'400px">
+          </div>
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 9:30AM and closes at 5PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <img src='images/Goa state museum.jpg' height='200px' width="'400px">
+
+          <div>
+            <p>
+              Convent of Santa Monica, Holy Hill, next to the ruins of the St. Augustine Monastery, Old Goa.
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Karnataka</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">KARNATAKA</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>Visvesvaraya Industrial & Technological Museum</h1>
+          <p>
+            The Visvesvaraya Industrial and Technological Museum (VITM), Bangalore, India, a constituent unit of the
+            National Council of Science Museums (NCSM), Ministry of Culture, Government of India, was established in
+            memory of Sir M. Visvesvaraya. The 4,000 m2 (43,000 sq ft) building was constructed in Cubbon Park, and was
+            inaugurated by the first Prime Minister of India, Pandit Jawaharlal Nehru, on July 14, 1962. The museum
+            displays industrial products, scientific models and engines.
+          </p>
+          <div id="image">
+            <img
+              src="https://th.bing.com/th?id=OLC.yrwblFcdiH8OAA480x360&w=239&h=140&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>Honoring Sir M. Visvesvaraya, the All India Manufacturers Organization and Mysore State Board decided to
+            create a science and technology museum in Bangalore. The foundation stone was laid by Shri B. D. Jatti,
+            Chief Minister of Mysore, on 15 September 1958. The Visvesvaraya Industrial Museum Society (VIMS) came to be
+            registered as the nodal agency in order to pool resources from various industrial houses. It was inaugurated
+            by the first Prime Minister of India, Pandit Jawaharlal Nehru, on July 14, 1962.[1]
+
+            The first exhibition, 'Electricity', was opened to the public on July 27, 1965.[2]
+
+            In the year 1970, VITM launched the Mobile/Moving Science Exhibition (MSE) with 24 participatory exhibits
+            mounted on a bus. The MSE Bus travels throughout Southern India.
+
+            In 1978, many science museums, including VITM, parted from CSIR and were brought under a newly formed
+            society registered on 4 April 1978 as National Council of Science Museums (NCSM). In 1979 an extension was
+            added to the building, increasing the total area of the museum to 6,900 m2 (74,000 sq ft).
+
+            NCSM set up three additional science centers at Gulbarga (Karnataka) in 1984, Tirunelveli (Tamil Nadu) in
+            1987, Tirupati (Andhra Pradesh)in 1993 and at Kozhikode, Kerala in 1997, which are functioning under the
+            direct administrative control of VITM. Thus, VITM has become the southern zone headquarters of NCSM.
+          </P>
+          <h1>EXHIBITION GALLERIES</h1>
+          <div>
+            <p>Engine Hall exhibits engines of various cars, machines used in industry, a jet aircraft engine, and other
+              mechanical devices.
+              Through engaging exhibitions, the How Things Work gallery aims to illustrate how machines operate. The
+              pulley system, gears, various motion-transfer mechanisms, levers, inclined planes, and screws that reduce
+              effort are all included as exhibits. The use of these straightforward devices in everyday life is covered
+              in a separate section.
+              The Fun Science gallery that displays exhibits on the science of sound, optics, fluids, math and
+              perception.
+              The Electro Technic Gallery contains interactive electrical exhibits which work on the basic principles of
+              electricity, electronics and communication. A renovated version of the Electro Technic gallery was opened
+              to public on 8 April 2010. This gallery exhibits the classical experiments like Oersted's experiment,
+              Barlow's wheel, and Faraday's ring. A demonstration on electrostatics, which includes a Tesla coil and a
+              Van de Graaff generator is on display.
+              The Space – Emerging Technology in the Service of Mankind gallery showcases the achievements of the Indian
+              Space Program. It was inaugurated on 19 June 1999. The Gallery was renovated with guidance of Indian Space
+              Research Organization and reopened as Space Technology on 28 November 2017 by A. S. Kiran Kumar and
+              Krishnaswamy Kasturirangan. It is the first Science Gallery in India dedicated to Space and Space
+              Technology.
+              The Biotechnological Revolution hall has exhibits on the basics of biotechnology and its applications,
+              including human genome sequencing. It opened on 4 January 2003. This exhibition has been renovated with
+              new interactive exhibits and displays. This new-look exhibition was opened to public as 'Biotechnology'
+              Gallery on 15 February 2021.
+              The BEL Hall of Electronics was inaugurated on 29 June 2004 in collaboration with Bharat Electronics Ltd
+              (BEL). This gallery has exhibits on the basic principles of electronics and information technology.
+              The 'Science for Kids' gallery was inaugurated on 19 April 2019. There are exhibits on Our Senses, about
+              animals, colours, light, sound etc. apart from interactive toys. There is an exhibit where kids can take
+              photos of themselves with life-size animal models. 'Mirror maze' is another attraction in this gallery.
+              The Dinosaur Alive exhibit has a moving replica of a Spinosaurus. This pneumatically-operated dinosaur can
+              move its head, hands and tail and roll its eyes at the visitors.
+              The Science on a Sphere facility was opened on 28 July 2014, in celebration of the golden jubilee of VITM.
+              The Wright Brothers exhibit, also added in 2014, includes a 1:1 scale model of the Wright Brothers’ Flyer,
+              fabricated in-house, and a flight simulator.</p>
+
+            <img src='https://th.bing.com/th/id/OIP.Kf4SItbxB2DrerdGr_2G0wHaE5?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
+              height='200px' width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.judEgZVUsbow1ayYHWkVSQHaE8?w=232&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
+              height='200px' width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.VPmdmklH3fiBzcNvdwEqKQHaE8?w=233&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'
+              height='200px' width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.x-CK1QNa9wmE7OKqtRdZpgHaE5?w=298&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7'
+              height='200px' width="'400px">
+
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 9:30AM and closes at 6PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9487377436662!2d77.59434047489306!3d12.975130587340582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15df82222aab%3A0x7fd53f96474af8a7!2sVisvesvaraya%20Industrial%20%26%20Technological%20Museum!5e0!3m2!1sen!2sin!4v1749337288693!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Kasturba Road, M.G.Road, Bengaluru, Karnataka 560001
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

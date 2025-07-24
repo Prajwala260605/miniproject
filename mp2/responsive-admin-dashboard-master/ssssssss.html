@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National festivals of Bharat</title>
+    <style>
+ @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+body {
+            animation: fadeIn 2s ease; /* Adjust the duration and timing function as needed */
+        }
+        /* Your existing styles... */
+
+        h1 {
+            color: black;
+            font-family: 'Stencil', sans-serif;
+        }
+
+        /* Additional style to include Stencil font */
+        @import url('https://fonts.googleapis.com/css2?family=Stencil&display=swap');
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-      ;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Add this to allow wrapping to the next row */
+        }
+
+        .image-wrapper {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            margin: 10px; /* Add margin for spacing between images */
+        }
+
+        .image-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .clickableImage {
+            width: 100%;
+            height: 200px; /* Set a fixed height for all clickable images */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>NATIONAL DAYS OF BHARAT</h1>
+
+    <nav>
+        <ul>
+            <li><a href="C:\Users\USER\Desktop\project\nationalfest.html">Home</a></li>
+            <li><a href="C:\Users\USER\Desktop\project\gallery.html">Gallery</a></li>
+            <li><a href="C:\Users\USER\Desktop\project\information.html">Social need</a></li>
+            <li><a href="C:\Users\USER\Desktop\project\help desk.html">Help Desk</a></li>
+        </ul>
+    </nav>
+
+    <div class="image-container">
+        <!-- First Row -->
+        <div class="image-wrapper" onclick="showContent('content1')">
+            <img src="C:\Users\USER\Desktop\project\independence day.jpg" class="clickableImage">
+            <div class="content" id="content1">
+                <h2>INDEPENDENCE DAY</h2>
+                <p>Indian independence refers to the historic event on August 15, 1947, marking the end of British colonial rule and the establishment of a sovereign, democratic nation, India.</p> <p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\independence day.html">See More</a></p>
+            </div>
+        </div>
+
+        <!-- Duplicate the remaining five image wrappers from the first row here -->
+        <div class="image-wrapper" onclick="showContent('content2')">
+            <img src="C:\Users\USER\Desktop\project\gandhi jayanthi.jpg" alt="Clickable Image 2" class="clickableImage">
+            <div class="content" id="content2">
+                <h2>GANDHI JAYANTHI</h2>
+                <p>Gandhi Jayanti, observed on October 2nd, commemorates the birth anniversary of Mahatma Gandhi, the leader of the Indian independence movement, and promotes non-violence and civil disobedience as enduring principles.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content3')">
+            <img src="C:\Users\USER\Desktop\project\big-g-media-3tn8kIRAvYk-unsplash.jpg" alt="Clickable Image 3" class="clickableImage">
+            <div class="content" id="content3">
+                <h2>REPUBLIC DAY</h2>
+                <p>Indian Republic Day, celebrated on January 26th, honors the adoption of the Constitution of India in 1950, marking the country's transition to a sovereign, democratic republic.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content4')">
+            <img src="C:\Users\USER\Desktop\project\teachersday.jpg" alt="Clickable Image 4" class="clickableImage">
+            <div class="content" id="content4">
+                <h2>TEACHERS DAY</h2>
+                <p>Indian Teachers' Day, celebrated on September 5th, honors the birth anniversary of Dr. Sarvepalli Radhakrishnan, highlighting the profound role of educators and expressing gratitude for their dedication and influence on students' lives.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content5')">
+            <img src="C:\Users\USER\Desktop\project\childrens day.jpg" alt="Clickable Image 5" class="clickableImage">
+            <div class="content" id="content5">
+                <h2>CHILDRENS DAY</h2>
+                <p>Indian Children's Day, celebrated on November 14th, commemorates the birthday of Jawaharlal Nehru, the first Prime Minister of India, and is a day dedicated to acknowledging and promoting the welfare, rights, and happiness of children across the nation.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content6')">
+            <img src="C:\Users\USER\Desktop\project\ambedhkar jayanthi.jpg" alt="Clickable Image 6" class="clickableImage">
+            <div class="content" id="content6">
+                <h2>AMBEDKAR JAYANTI</h2>
+                <p>Ambedkar Jayanti, observed on April 14th, commemorates the birth anniversary of Dr. B.R. Ambedkar, a key architect of the Indian Constitution and a social reformer, emphasizing his contributions to the upliftment of marginalized communities and the promotion of social justice.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="image-wrapper" onclick="showContent('content7')">
+            <img src="C:\Users\USER\Desktop\project\youth day.jpg" alt="Clickable Image 7" class="clickableImage">
+            <div class="content" id="content7">
+                <h2>NATIONAL YOUTH DAY</h2>
+                <p>National Youth Day, observed on January 12th, commemorates the birth anniversary of Swami Vivekananda, inspiring and celebrating the energy, enthusiasm, and potential of the youth in contributing to the nation's progress.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content8')">
+            <img src="C:\Users\USER\Desktop\project\indian army day.jpg" alt="Clickable Image 8" class="clickableImage">
+            <div class="content" id="content8">
+                <h2>INDIAN ARMY DAY</h2>
+                <p>Indian Army Day, celebrated on January 15th, honors the valiant soldiers and commemorates the appointment of General K. M. Cariappa as the first Commander-in-Chief of the Indian Army in 1949.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content9')">
+            <img src="C:\Users\USER\Desktop\project\desh prem divas.jpg" alt="Clickable Image 9" class="clickableImage">
+            <div class="content" id="content9">
+                <h2>DESH PREM DIVAS</h2>
+                <p>Desh Prem Divas, also known as Patriot's Day, observed on January 23rd, pays tribute to the freedom fighters and their sacrifices for the nation, fostering a spirit of patriotism and love for the country.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content10')">
+            <img src="C:\Users\USER\Desktop\project\dandi march.jpg" alt="Clickable Image 10" class="clickableImage">
+            <div class="content" id="content10">
+                <h2>DANDI MARCH DAY</h2>
+                <p>Dandi March Day, observed on March 12th, commemorates Mahatma Gandhi's historic Salt March in 1930, a pivotal nonviolent protest against British salt taxes and a symbol of India's struggle for independence.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content11')">
+            <img src="C:\Users\USER\Desktop\project\hindi divas.jpg" alt="Clickable Image 11" class="clickableImage">
+            <div class="content" id="content11">
+                <h2>HINDI DIVAS</h2>
+                <p>Hindi Divas, celebrated on September 14th, marks the adoption of Hindi as one of the official languages of India, promoting linguistic diversity and cultural heritage.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content12')">
+            <img src="C:\Users\USER\Desktop\project\anti terrorism.jpg" alt="Clickable Image 12" class="clickableImage">
+            <div class="content" id="content12">
+                <h2>ANTI TERRORISM DAY</h2>
+                <p>Anti-Terrorism Day, observed on May 21st, aims to raise awareness about the impact of terrorism on society and promote unity against the menace, commemorating the death anniversary of former Prime Minister Rajiv Gandhi.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+<!-- Second Row -->
+        <div class="image-wrapper" onclick="showContent('content13')">
+            <img src="C:\Users\USER\Desktop\project\martrys day.jpg" alt="Clickable Image 13" class="clickableImage">
+            <div class="content" id="content13">
+                <h2>MARTYR'S DAY</h2>
+                <p>Martyrs' Day is a day of remembrance and tribute to those who sacrificed their lives for a noble cause or in the service of a country or a particular ideology.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\martyrs day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content14')">
+            <img src="C:\Users\USER\Desktop\project\national cleanliness day.jpg" alt="Clickable Image 14" class="clickableImage">
+            <div class="content" id="content14">
+                <h2>NATIONAL CLEANLINESS DAY</h2>
+                <p>National Cleanliness Day is a designated day to promote awareness and action towards maintaining a clean and hygienic environment, emphasizing the importance of personal and community responsibility for cleanliness.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\indian cleanliness day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content15')">
+            <img src="C:\Users\USER\Desktop\project\excise day.jpg" alt="Clickable Image 15" class="clickableImage">
+            <div class="content" id="content15">
+                <h2>EXCISE DAY</h2>
+                <p>Indian Excise Day, observed on February 24th, commemorates the establishment of the Central Excise and Salt Act in 1944, highlighting the contributions and efforts of excise officers in the country.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\central excise day.html">See More</a></p>
+            </div>
+        </div>
+
+                <div class="image-wrapper" onclick="showContent('content16')">
+            <img src="C:\Users\USER\Desktop\project\consumer day.jpg" alt="Clickable Image 16" class="clickableImage">
+            <div class="content" id="content16">
+                <h2>CONSUMERS DAY</h2>
+                <p>Indian Consumers Day, observed on December 24th, serves to raise awareness about consumer rights, responsibilities, and the importance of fair business practices, fostering a culture of informed and empowered consumers in India.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national consumers day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content17')">
+            <img src="C:\Users\USER\Desktop\project\immunization day.jpg" alt="Clickable Image 17" class="clickableImage">
+            <div class="content" id="content17">
+                <h2>IMMUNIZATION DAY</h2>
+                <p>Indian Immunization Day, observed on January 17th, is a nationwide initiative to promote the importance of immunization and to ensure the widespread availability and accessibility of vaccines to protect against preventable diseases.
+
+
+
+
+</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national immunization day.html">See More</a></p>
+            </div>
+        </div>
+<!-- Second Row -->
+        <div class="image-wrapper" onclick="showContent('content18')">
+            <img src="C:\Users\USER\Desktop\project\labour day.jpg" alt="Clickable Image 18" class="clickableImage">
+            <div class="content" id="content18">
+                <h2>LABOUR DAY</h2>
+                <p>Indian Labour Day, observed on May 1st, honors the contributions of workers and their rights, commemorating the labor movement's achievements in advocating for fair working conditions and improved labor laws in India.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national labour day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content19')">
+            <img src="C:\Users\USER\Desktop\project\tech day.jpg" alt="Clickable Image 19" class="clickableImage">
+            <div class="content" id="content19">
+                <h2>NATIONAL TECHNOLOGY DAY</h2>
+                <p>Indian Technology Day, celebrated on May 11th, marks the successful nuclear tests conducted in 1998, showcasing India's technological prowess and advancements in the field of science and technology.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national technology day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content20')">
+            <img src="C:\Users\USER\Desktop\project\quit india day.jpg" alt="Clickable Image 20" class="clickableImage">
+            <div class="content" id="content20">
+                <h2>QUIT INDIA MOVEMENT</h2>
+                <p>Quit India Movement Day, observed on August 8th, commemorates the day in 1942 when Mahatma Gandhi launched the Quit India Movement, urging the Indian people to demand an end to British colonial rule and work towards India's independence.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\quit india movement day.html">See More</a></p>
+            </div>
+        </div>
+        <!-- First Row -->
+        <div class="image-wrapper" onclick="showContent('content21')">
+            <img src="C:\Users\USER\Desktop\project\sadhbhavana.jpg" alt="Clickable Image 21" class="clickableImage">
+            <div class="content" id="content21">
+                <h2>SADHBHAVANA DIVAS</h2>
+                <p>Sadbhavana Diwas, observed on August 20th, is a day dedicated to fostering goodwill and harmony among the people of India, promoting the values of peace, unity, and brotherhood.</p> <p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\sadhbhavana diwas.html">See More</a></p>
+            </div>
+        </div>
+
+        <!-- Duplicate the remaining five image wrappers from the first row here -->
+        <div class="image-wrapper" onclick="showContent('content22')">
+            <img src="C:\Users\USER\Desktop\project\blood donation day.jpg" alt="Clickable Image 22" class="clickableImage">
+            <div class="content" id="content22">
+                <h2>NATIONAL VOLUNTARY BLOOD DONATION DAY</h2>
+                <p>Indian Voluntary Blood Donation Day, observed on October 1st, aims to raise awareness about the importance of voluntary blood donation, recognizing and appreciating individuals who contribute to saving lives through their selfless act of donating blood.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\blood donation day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content23')">
+            <img src="C:\Users\USER\Desktop\project\air force.jpg" alt="Clickable Image 23" class="clickableImage">
+            <div class="content" id="content23">
+                <h2>AIRFORCE DAY</h2>
+                <p>Indian Air Force Day, celebrated on October 8th, honors the valiant efforts and contributions of the Indian Air Force, showcasing its prowess in safeguarding the nation's airspace and serving as a tribute to the air warriors.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\indian air force day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content24')">
+            <img src="C:\Users\USER\Desktop\project\post day.jpg" alt="Clickable Image 24" class="clickableImage">
+            <div class="content" id="content24">
+                <h2>INDIAN POST DAY</h2>
+                <p>Indian Post Day, celebrated on October 10th, commemorates the establishment of the Indian postal system in 1854, recognizing the vital role of postal services in facilitating communication and connecting people across the country.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national postal day.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content25')">
+            <img src="C:\Users\USER\Desktop\project\integration day.jpg" alt="Clickable Image 25" class="clickableImage">
+            <div class="content" id="content25">
+                <h2>NATIONAL INTEGRATION DAY</h2>
+                <p>National Integration Day, observed on November 19th in India, commemorates the birth anniversary of the first female Prime Minister of India, Indira Gandhi, promoting the ideals of unity, peace, and fostering national integration among the diverse communities in the country.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national integration day.html">See More</a></p>
+            </div>
+        </div>
+
+        
+
+       
+
+        <div class="image-wrapper" onclick="showContent('content26')">
+            <img src="C:\Users\USER\Desktop\project\flag day.jpg" alt="Clickable Image 26" class="clickableImage">
+            <div class="content" id="content26">
+                <h2>FLAG DAY </h2>
+                <p>Indian Flag Day, observed on December 7th, is dedicated to honoring the sacrifices of the armed forces and raising funds for the welfare of the Indian Armed Forces personnel and their families.</p><p>For more information, <a href="independence-day-details.html">See More</a></p>
+            </div>
+        </div>
+
+        <div class="image-wrapper" onclick="showContent('content27')">
+            <img src="C:\Users\USER\Desktop\project\energy conservation day.jpg" alt="Clickable Image 27" class="clickableImage">
+            <div class="content" id="conten27">
+                <h2>NATIONAL ENERY CONSERVATION DAY</h2>
+                <p>Indian Energy Conservation Day, observed on December 14th, emphasizes the importance of energy efficiency and sustainable practices, encouraging individuals and organizations to contribute to the conservation of energy resources for a greener and more sustainable future.</p><p>For more information, <a href="C:\Users\USER\Desktop\project\festivals\national energy conservation day.html">See More</a></p>
+            </div>
+        </div>
+
+        
+
+        
+        
+
+
+        <!-- Continue this pattern for additional rows -->
+        <!-- ... -->
+
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            var contentDiv = document.getElementById(contentId);
+
+            if (contentDiv.style.display === 'none') {
+                contentDiv.style.display = 'block';
+            } else {
+                contentDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

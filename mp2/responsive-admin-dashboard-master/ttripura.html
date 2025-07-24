@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Tripura</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">TRIPURA</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>Ujjayanta palace museum</h1>
+          <p>
+            The Ujjayanta Palace ( Bengali: [uɟɟɔʲont̪o praʃad̪] ), also known as Nuyungma in Tripuri, is the former
+            royal palace of Tripura kingdom built by Maharaja Radha Kishore Manikya in 1901; and the name was given by
+            Rabindranath Tagore. It housed the State Legislative Assembly up to 2011. At present, it is the State Museum
+            of Tripura, which is located in the capital Agartala.
+
+            The palace was constructed between 1899 and 1901 by Maharaja Radha Kishore Manikya Debbarma and stands on
+            the banks of two lakes surrounded by gardens inspired by the European style. It was the home of the ruling
+            Manikya dynasty until Tripura's merger into India in October 1949. The palace was purchased from the royal
+            family by the Government of Tripura in 1972–73 for Rs. 2.5 million, and used to house the State Legislative
+            Assembly until July 2011. Ujjayanta Palace is now a State Museum and it primarily showcases the lifestyle,
+            arts, culture, tradition and utility crafts of communities residing in northeast India, along with a lot of
+            stone sculptures, coinage of the Manikya dynasty and some other artifacts.
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Uajjayanta_Palace.jpg/450px-Uajjayanta_Palace.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            Tripura claims to be one of the oldest princely states of ancient India. The royal line of Tripura began
+            during the reign of Maharaja Maha Manikya, who was crowned in 1400 AD, and was the first ruler under the
+            royal title of Manikya. Ujjayanta Palace was built in 1862, 10 km (6 mi) away from Agartala, by King Ishan
+            Chandra Manikya (1849–1862). It was devastated by the Assam earthquake of 12 June 1897. The palace was
+            rebuilt in the heart of Agartala city by Maharaja Radha Kishore Manikya in 1899–1901, at a then exorbitant
+            cost of 10 lakh (1 million) rupees. It was built by Martin and Burn Co.
+          </P>
+          <h1>DESIGN</h1>
+          <div>
+            <p>The Ujjayanta Palace compound covers an area of approximately 1 km2 (250 acres) and includes public rooms
+              such as the throne room, durbar hall, library and reception hall. The buildings and grounds cover 800
+              acres (3.2 km2) in the heart of Agartala. The neoclassical palace was designed by Sir Alexander Martin of
+              the Martin and Burn Company. The two-storied palace has three large domes, the largest of which is 86 ft
+              (26 m) high, and which rests atop a four-storied central tower. The architecture shows a mix of
+              influences: Mughal, Roman and British There are two large artificial ponds on either side of the garden
+              which is decorated with pools and fountains.
+
+              Several Hindu temples occupy plots adjacent to Ujjayanta Palace, dedicated to Lakshmi Narayan,
+              Uma-Maheshwari, Durga and Jagannath.</p>
+
+          </div>
+          <div>
+
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://th.bing.com/th/id/OIP.H34mtdc4rGqGFONeJ5_m9QHaFj?pid=ImgDet&w=474&h=355&rs=1'
+              height='200px' width="'400px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/A_part_of_the_northern_area_of_the_palace.jpg/384px-A_part_of_the_northern_area_of_the_palace.jpg'
+              height='200px' width="'400px">
+
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Tripura_State_Museum_Agartala_Tripura_India.jpg/427px-Tripura_State_Museum_Agartala_Tripura_India.jpg'
+              height='200px' width="'400px">
+
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+
+            <p> opens at 11:00AM & closes at 18:00PM</p>
+
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.4724869817296!2d91.2801378751664!3d23.837350278611137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f55d3fb69973%3A0x6f532f0800b2be03!2sUjjayanta%20Palace!5e0!3m2!1sen!2sin!4v1749338125502!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Palace Compound, Indranagar, Agartala, Tripura 799001
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

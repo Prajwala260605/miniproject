@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Museums in India</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <h3 class="head">MUSEUMS IN INDIA</h3>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+            position: fixed;
+            bottom: 570px;
+            right: 20px;
+            z-index: 10000;
+            padding: 6px 12px;
+            background-color: #80b9cb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="booking.html">
+            <span class="material-icons-outlined">confirmation_number</span> Book Tickets
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <h1 class="font-weight-bold">About Us</h1>
+      </div>
+      <div class="page">
+        <div class="content">
+          <h3>Welcome to Museums in India</h3>
+          <p>
+            "Museums in India" is a dedicated initiative to celebrate and showcase the rich cultural, historical, and
+            scientific heritage preserved within India’s diverse network of museums. Our project serves as a digital
+            gateway, offering an immersive exploration of India’s vast repository of artifacts, artworks, and
+            innovations. From ancient relics to contemporary masterpieces, we aim to highlight the stories and treasures
+            that define India’s multifaceted identity.
+          </p>
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to promote awareness and appreciation of India’s museums as vital custodians of the nation’s
+            legacy. By curating comprehensive information, interactive 3D tours, and engaging content, we strive to make
+            these cultural institutions accessible to a global audience. Whether you are a history enthusiast, an art
+            lover, or a curious explorer, our platform invites you to discover the profound narratives housed in India’s
+            museums.
+          </p>
+          <h3>How to Navigate</h3>
+          <p>
+            Our platform is designed for seamless exploration. Navigate through dedicated sections featuring various
+            museum categories, including archaeological, art, science, and specialized collections. Engage with
+            interactive features such as virtual 3D tours, detailed exhibits, and a responsive chatbot to guide your
+            journey. Whether you’re researching ancient civilizations, admiring modern art, or exploring scientific
+            advancements, our intuitive interface ensures a captivating experience.
+          </p>
+          <h3>Our Vision</h3>
+          <p>
+            We envision "Museums in India" as a bridge connecting people to the heart of India’s heritage. By leveraging
+            technology, we aim to preserve and share the stories embedded in these cultural repositories, fostering a
+            deeper understanding of India’s past, present, and future. Join us on this virtual journey to uncover the
+            treasures that lie within the museums of India.
+          </p>
+          <h3>Guided By</h3>
+          <p>
+            Ms. Jindam Sowjanya, whose expertise and mentorship have been instrumental in shaping this project.
+          </p>
+          <h3>Our Team</h3>
+          <p>
+            <strong>K. Sumanth (2451-22-737-160)</strong><br>
+            <strong>L. Prajwala (2451-22-737-165)</strong><br>
+            <strong>E. Amruth Reddy (2451-22-737-178)</strong><br>
+            A passionate team of innovators committed to bringing India’s cultural heritage to life through technology.
+          </p>
+          <h3>Contact Us</h3>
+          <p>
+            We welcome feedback, inquiries, and collaborations. Reach out to us via the <a href="contactus.html">Contact
+              Us</a> page to connect with our team or learn more about how you can contribute to this initiative.
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+  </div>
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>West Bengal</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">WEST BENGAL</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>INDIAN MUSEUM</h1>
+          <p>
+            The Indian Museum (formerly called Imperial Museum of Calcutta before independence,) is a massive museum in
+            Central Kolkata, West Bengal, India. It is the ninth oldest museum in the world and the oldest and largest
+            museum in India and Asia, by size of collection. It has rare collections of antiques, armour and ornaments,
+            fossils, skeletons, mummies and Mughal paintings. It was founded by the Asiatic Society of Bengal in Kolkata
+            (Calcutta), India, in 1814. The founder curator was Nathaniel Wallich, a Danish botanist.
+
+            It has six sections comprising thirty five galleries of cultural and scientific artifacts namely Indian art,
+            archaeology, anthropology, geology, zoology and economic botany. Many rare and unique specimens, both Indian
+            and trans-Indian, relating to humanities and natural sciences, are preserved and displayed in the galleries
+            of these sections. In particular the art and archaeology sections hold collections of international
+            importance.
+
+            It is an autonomous organization under the Ministry of Culture, Government of India. The present Director of
+            the Indian Museum is Shri Arijit Dutta Choudhury who is also the Director General, NCSM and having the
+            additional charge of Director General of National Library.
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Indian_Museum%2C_Courtyard%2C_Kolkata%2C_India.jpg/375px-Indian_Museum%2C_Courtyard%2C_Kolkata%2C_India.jpg"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            The Indian Museum originated from the Asiatic Society of Bengal which was created by Sir William Jones in
+            1784. The concept of having a museum arose in 1796 from members of the Asiatic Society as a place where
+            man-made and natural objects collected could be kept, cared for and displayed.
+
+            The objective began to look achievable in 1808 when the Society was offered suitable accommodation by the
+            Government of India in the Chowringhee-Park Street area.[11]
+
+            On February 2, 1814, Nathaniel Wallich, a Danish botanist, who had been captured in the siege of Serampore
+            but later released, wrote to the council of the Asiatic Society for the formation of a museum out of his own
+            collection and that of the Asiatic Society in Calcutta, volunteering his service as a Curator wherein he
+            proposed five sections—an archaeological, ethnological, a technical section and a geological and zoological
+            one.[12] The council readily agreed and the Museum was created, with Wallich named the Honorary Curator and
+            then Superintendent of the Oriental Museum of the Asiatic Society. Wallich also donated a number of
+            botanical specimens to the museum from his personal collection. In 1815, Mr William Lloyd Gibbons, Asst
+            Secretary and Librarian, was appointed Joint Secretary of the Museum.
+            After the resignation of Wallich, curators were paid salaries by the Asiatic Society ranging from Rs 50 to
+            Rs 200 a month. However, in 1836, when the bankers of the Asiatic Society (Palmer and Company) became
+            insolvent, the Government began to pay the salary of the Curator from its public funds since a large part of
+            the collection was that of the surveyors of Survey of India.
+
+            A temporary grant of Rs 200 per month was sanctioned for maintenance of the museum and library, and J. T.
+            Pearson of the Bengal Medical Service was appointed curator, followed shortly by John McClelland and, after
+            the former's resignation, by Edward Blyth.
+
+            In 1840, the Government took a keen interest in geology and mineral resources, and this led to an additional
+            grant of Rs 250 per month for the geological section alone. In 1851 when the Geological Survey of India came
+            into being with the advent of Sir Thomas Oldham, a rented building at 1, Hastings Road now K N Roy Road, the
+            present site of the New Secretariat became its office. The geological collection of the Government of India
+            'Museum of Economic Geology' at the Asiatic Society, were then transferred to this site in 1856. The Asiatic
+            Society geological collection were however held back with the condition that it would be handed over to the
+            GSI once a Museum for all its collection came into being. It was way back in 1837 that Sir James Princeps,
+            then-Secretary of the Asiatic Society, had written to the Government asking for a Museum paid for by the
+            state. A movement for a full-fledged Museum was thereafter keenly pursued over a decade, and later, with Sir
+            Thomas Oldham, then Superintendent of the Geological Survey of India, at the helm, it gained momentum.
+            The thrust for a full-fledged Museum was held up due to the intervention of the revolt of the sepoys of the
+            East India Company. The matter was pursued again, once things settled down after India came under the Crown.
+
+            Thereafter the First Indian Museum Act was passed in 1866 and the foundation of the Indian Museum at its
+            present site laid in 1867. In 1875 the present building on Chowringee Road, presently Jawaharlal Nehru Road,
+            designed by W L Granville in consultation with Sir Thomas Holland, on Chowringee was completed. In 1877
+            after the retirement of Sir Thomas Oldham in 1876 the Geological Survey of India including the Museum of
+            Economic Geology shifted here from its rented accommodation on 1 Hastings Road.
+
+            This building had been designated as the site for not just the Asiatic Societies, Oriental Museum's
+            collection and the Economic Geology collection of the Geological Survey of India but also to hold the
+            offices of both.
+
+            The Asiatic Society however relinquished its rights preferring to maintain its autonomy from the government.
+            The Geological Survey of India is till date headquartered at the buildings of the Indian Museum Complex and
+            holds exclusive rights over the Geological galleries of the Indian Museum.
+
+            The building parallel to Sudder Street commenced in 1888 and occupied in 1891. The next building block at
+            right angle to Sudder Street was erected in 1894. Half of this building was consigned to the Geological
+            Survey of India but by 1912 it was wholly transferred to it.
+
+            The Zoological and Anthropological sections of the museum gave rise to the Zoological Survey of India in
+            1916, which in turn gave rise to the Anthropological Survey of India in 1945.[13]
+
+            The Scottish anatomist and zoologist John Anderson took up the position of curator in 1865, and catalogued
+            the mammal and archaeology collections. The English zoologist James Wood-Mason worked at the museum from
+            1869 and succeeded Anderson as curator in 1887.[14]
+
+            The museum was closed to visitors for restoration and upgrades from September 2013 to February 2014
+          </P>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/The_Museum%2C_Chowringhee.jpg/330px-The_Museum%2C_Chowringhee.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/East_Gateway_and_Railings_Bharhut_Stupa.jpg/1920px-East_Gateway_and_Railings_Bharhut_Stupa.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Stone_sculpture_of_Devi_Durga_30_Jan_2018.jpg/800px-Stone_sculpture_of_Devi_Durga_30_Jan_2018.jpg'
+            height='100px' width="'150px">
+          <h1>COLLECTIONS</h1>
+          <div>
+            <h4>EGYPTIAN</h4>
+            <p>
+              It currently occupies a resplendent mansion, and exhibits among others: an Egyptian mummy. The mummy is
+              being restored
+            </p>
+
+          </div>
+          <div>
+            <h4>INDIAN</h4>
+            <p>
+              The large collection of ancient and medieval Indian artifacts include the complete railings and gateways
+              of the Buddhist stupa from Bharhut (the bare stupa is still at Bharhut, near Satna, MP). The Bharhut
+              panels are unique in that they are inscribed in the Brahmi script. The museum has a collection of the
+              remains of the slightly later Amaravati Stupa. There is a large and representative collection of Buddhist
+              and Hindu sculptures of the medieval period, especially those from Bengal, Bihar, and Odisha.
+
+              Also preserved are Buddha's relics, a copy of the Lion Capital of Ashoka from an Ashoka pillar (original
+              in the Sarnath Museum) whose four-lion symbol became the official emblem of the Republic of India, fossil
+              skeletons of prehistoric animals, an art collection, rare antiques, and a collection of meteorites.
+
+              The Indian Museum is also regarded as "the beginning of a significant epoch initiating the socio-cultural
+              and scientific achievements of the country. It is otherwise considered as the beginning of the modernity
+              and the end of medieval era"
+            </p>
+          </div>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Egyptian_Human_Mummy_-_Egyptian_Gallery_-_Indian_Museum_-_Kolkata_2014-02-14_3291.JPG/330px-Egyptian_Human_Mummy_-_Egyptian_Gallery_-_Indian_Museum_-_Kolkata_2014-02-14_3291.JPG'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Elephant_specimen_kol.jpg/1280px-Elephant_specimen_kol.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Indian_Museum%2C_Kolkata%2C_India.jpg/1280px-Indian_Museum%2C_Kolkata%2C_India.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Indian_Museum%2C_Bottles%2C_Kolkata%2C_India.jpg/1280px-Indian_Museum%2C_Bottles%2C_Kolkata%2C_India.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Musty_showcases_kol.jpg/1280px-Musty_showcases_kol.jpg'
+            height='100px' width="'150px">
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Buddha_Preaching_in_Tushita_Heaven._Amaravati%2C_Satavahana_period%2C_2d_century_AD._Indian_Museum%2C_Calcutta.jpg/1280px-Buddha_Preaching_in_Tushita_Heaven._Amaravati%2C_Satavahana_period%2C_2d_century_AD._Indian_Museum%2C_Calcutta.jpg'
+            height='100px' width="'150px">
+          <h1>TIMINGS</h1>
+          <div>
+            <h4>MARCH TO NOVEMBER</h4>
+            <p>10:00AM - 05:00PM</p>
+            <h4>DECEMBER TO FEBRUARY</h4>
+            <p>10:00AM - 04:30PM</p>
+
+          </div>
+          <div>
+            <p>Closed on monday and public holidays.</p>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.567043768272!2d88.34855187512623!3d22.557885779502254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771160347adf%3A0x9fd70619f94d0bac!2sIndian%20Museum!5e0!3m2!1sen!2sin!4v1749338304423!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              27, Jawaharlal Nehru Road, Park Street, Kolkata - 700016
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

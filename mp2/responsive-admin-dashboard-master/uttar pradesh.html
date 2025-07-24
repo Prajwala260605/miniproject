@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Uttar pradesh</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">UTTAR PRADESH</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>GOVERNMENT MUSEUM</h1>
+          <p>
+            Government Museum, Mathura, commonly referred to as Mathura museum, is an archaeological museum in Mathura
+            city of Uttar Pradesh state in India. The museum was founded by then collector of the Mathura district, Sir
+            F. S. Growse in 1874. Initially, it was known as Curzon Museum of Archaeology, then Archaeology Museum,
+            Mathura, and finally changed to the Government Museum, Mathura.[
+          </p>
+          <div id="image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Government_Museum_-_Mathura_2013-02-23_5014.JPG/420px-Government_Museum_-_Mathura_2013-02-23_5014.JPG"
+              height="318px" width="500px" alt="Paris" class="center">
+          </div>
+          <h1>OVERVIEW</h1>
+          <p>
+            The museum houses artifacts pottery, sculptures, paintings, and coins primarily from in and around Mathura,
+            plus discoveries made by noted colonial archaeologists like Alexander Cunningham, F. S. Growse, and
+            Fuhrer.[1] The museum is famous for ancient sculptures of the Mathura school dating from 3rd century BC to
+            12th century AD., during Kushan Empire and Gupta Empire. today it is one of the leading museums of Uttar
+            Pradesh.
+
+            The Government of India issued a postage stamp on 9 October 1974 on the centenary of the museum.
+          </P>
+          <h1>COLLECTIONS</h1>
+
+          <div>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Archaic_Mother_Goddess_-_Terracotta_-_Circa_up_to_4th_Century_BCE_-_Showcase_17-12_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6441.JPG/107px-thumbnail.jpg'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Copper_Age_Tool_-_ACCN_93-51_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6248.JPG/119px-Copper_Age_Tool_-_ACCN_93-51_-_Prehistory_and_Terracotta_Gallery_-_Government_Museum_-_Mathura_2013-02-24_6248.JPG'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg/99px-Yaksha_Manibhadra_-_Parkham_Mathura_circa_150_BCE.jpg'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Amohaasi_Bodhisattva%2C_Mathura.jpg/136px-Amohaasi_Bodhisattva%2C_Mathura.jpg'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Colossal_Parasol_with_Eight_Auspicious_Symbols_-_Circa_1st_Century_CE_-_Gita_Enclave_-_ACCN_00-72-5_-_Government_Museum_-_Mathura_2013-02-23_5570.JPG/180px-Colossal_Parasol_with_Eight_Auspicious_Symbols_-_Circa_1st_Century_CE_-_Gita_Enclave_-_ACCN_00-72-5_-_Government_Museum_-_Mathura_2013-02-23_5570.JPG'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Great_Emperor_Kanishka_-_Greatest_of_Kushan_Monarchs_-_Circa_1st_Century_CE_-_Mathura_-_Government_Museum_-_Mathura_2013-02-23_5836.JPG/119px-Great_Emperor_Kanishka_-_Greatest_of_Kushan_Monarchs_-_Circa_1st_Century_CE_-_Mathura_-_Government_Museum_-_Mathura_2013-02-23_5836.JPG'
+              height='100px' width="'150px">
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Anjani_with_Child_Hanuman_-_Bronze_-_Pallava_Period_-_ACCN_15-524_-_Government_Museum_-_Mathura_2013-02-24_6600.JPG/75px-Anjani_with_Child_Hanuman_-_Bronze_-_Pallava_Period_-_ACCN_15-524_-_Government_Museum_-_Mathura_2013-02-24_6600.JPG'
+              height='100px' width="'150px">
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>open 24/7</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624097.1228645896!2d73.19708092499998!3d27.495481599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973711459dbf85b%3A0x43c24f82f3aea2a2!2sGovernment%20Museum%2C%20Mathura!5e0!3m2!1sen!2sin!4v1749338202955!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Museum Road, Dampier Nagar, Mathura, Uttar Pradesh 281001
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <h3 class="head">MUSEUMS IN INDIA</h3>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+            position: fixed;
+            bottom: 570px;
+            right: 20px;
+            z-index: 10000;
+            padding: 6px 12px;
+            background-color: #80b9cb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <h1 class="font-weight-bold">Contact Us</h1>
+      </div>
+      <div class="page">
+        <div class="content">
+          <h3>Connect with Museums in India</h3>
+          <p>
+            Thank you for your interest in "Museums in India," a digital initiative dedicated to showcasing the rich
+            cultural, historical, and scientific heritage preserved in India’s museums. We are eager to hear from you,
+            whether you have questions, feedback, or ideas to enhance our platform. Your input helps us bring India’s
+            cultural treasures closer to a global audience.
+          </p>
+          <h3>Contact Information</h3>
+          <p>
+            Reach out to our team members directly via email for inquiries, suggestions, or support:
+          </p>
+          <ul>
+            <li><strong>K. Sumanth</strong>: <a href="mailto:245122737160@mvsrec.edu.in">245122737160@mvsrec.edu.in</a>
+            </li>
+            <li><strong>L. Prajwala</strong>: <a href="mailto:245122737165@mvsrec.edu.in">245122737165@mvsrec.edu.in</a>
+            </li>
+            <li><strong>E. Amruth Reddy</strong>: <a
+                href="mailto:245122737178@mvsrec.edu.in">245122737178@mvsrec.edu.in</a></li>
+          </ul>
+          <p>
+            For collaboration opportunities or general inquiries, please contact us<!-- at <a
+              href="mailto:kallasumanth02@gmail.com">kallasumanth02@gmail.com</a>.-->
+          </p>
+          <h3>Join Our Community</h3>
+          <p>
+            Share your museum experiences, discoveries, or insights with us! Connect on social media using the hashtag
+            <strong>#MuseumsInIndia</strong> to join our growing community of heritage enthusiasts. Your stories may be
+            featured on our platform, inspiring others to explore India’s cultural repositories.
+          </p>
+          <h3>Collaborate with Us</h3>
+          <p>
+            We welcome partnerships with museum professionals, researchers, educators, and organizations passionate
+            about preserving and promoting India’s heritage. Whether you’re interested in contributing content, sharing
+            resources, or collaborating on virtual tours, we’d love to hear from you. Email us <!--at <a
+              href="mailto:kallasumanth02@gmail.com">kallasumanth02@gmail.com</a>--> to discuss potential
+            opportunities.
+          </p>
+          <h3>Stay Connected</h3>
+          <p>
+            Follow us on our journey to uncover the treasures of India’s museums. For real-time assistance, try our
+            interactive chatbot by clicking the "Open Chatbot" button on this page. We look forward to engaging with you
+            and making your exploration of India’s cultural heritage unforgettable!
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+  </div>
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

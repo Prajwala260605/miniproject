@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museum Hub</title>
+    <link rel="stylesheet" href="css/style3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">INDIAN MUSEUM HUB</div>
+            <nav class="top-nav">
+                <div class="nav-right">
+                    <ul class="icon-bar">
+                        <li>
+                            <button class="sound-button" title="Sound control" aria-label="Toggle background music">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                                <hr class="sound-button__line">
+                            </button>
+                        </li>
+                    </ul>
+                    <a href="signUp.html" class="auth">Sign In/Up</a>
+                </div>
+            </nav>
+        </header>
+        <audio id="background-music" loop>
+            <source src="audio/the-land-of-fairies-328502.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <main>
+            <div class="circle">
+                <img src="newImag/123.jpg" alt="Art 3" />
+            </div>
+            <div class="circle-gallery">
+                <div class="circle small">
+                    <img src="newImag/122.jpg" alt="Circle 1">
+                </div>
+                <div class="circle medium">
+                    <img src="newImag/121.jpg" alt="Circle 2">
+                </div>
+                <div class="circle tiny">
+                    <img src="newImag/111.jpg" alt="Circle 3">
+                </div>
+            </div>
+            <div class="text-content">
+                <h1>DISCOVER THE WORLD OF MUSEUMS</h1>
+                <a href="index.html" class="explore-btn">Explore Museums</a>
+            </div>
+        </main>
+    </div>
+    <script src="js/scripts.js"></script>
+    <!-- Fallback inline script for testing -->
+    <script>
+        // Ensure button works if external script fails
+        document.addEventListener('DOMContentLoaded', () => {
+            const soundButton = document.querySelector('.sound-button');
+            const audio = document.getElementById('background-music');
+            soundButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play().catch(error => console.error('Audio playback failed:', error));
+                    soundButton.classList.add('active');
+                } else {
+                    audio.pause();
+                    soundButton.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

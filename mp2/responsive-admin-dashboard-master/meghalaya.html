@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Meghalaya</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <marquee width="100%" direction="right" background-color="white">
+        <h1 class="head">MUSEUMS IN INDIA</h1>
+      </marquee>
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <a class="buttonlink" href="index.html">
+        <div class="buttonhm">Home</div>
+      </a>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">home</span> HOME
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li class="sidebar-list-item">
+          <a href="grid.html">
+            <div>
+              <span class="material-icons-outlined">museum</span> MUSEUMS
+            </div>
+          </a>
+
+        </li>
+
+
+        <li class="sidebar-list-item">
+          <a href="contactus.html">
+            <span class="material-icons-outlined">call</span> Contact Us
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="aboutus.html">
+            <span class="material-icons-outlined">group</span> About Us
+          </a>
+        </li>
+        <button
+          onclick="window.open('https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/06/28/07/20250628071858-WCOPVRD5.json', '_blank')"
+          style="
+    position: fixed;
+    bottom: 570px;
+    right: 20px;
+    z-index: 10000;
+    padding: 6px 12px;
+    background-color: #80b9cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  " id="open-bot-btn">
+          💬 Open Chatbot
+        </button>
+
+
+        <script>
+          const chatbot = document.getElementById('bp-chatbot-frame');
+          const closeBtn = document.getElementById('close-bot-btn');
+
+          document.querySelector('.sidebar-list-item a[href="#"]').addEventListener('click', () => {
+            chatbot.style.display = 'block';
+            closeBtn.style.display = 'block';
+          });
+
+          closeBtn.addEventListener('click', () => {
+            chatbot.style.display = 'none';
+            closeBtn.style.display = 'none';
+          });
+        </script>
+
+        <li class="sidebar-list-item">
+          <a href="3d.html">
+            <span class="material-icons-outlined">3d_rotation</span> 3D View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="vr.html">
+            <span class="material-icons-outlined">vrpano</span> 360° View
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="video.html" target="_blank">
+            <span class="material-icons-outlined">play_circle_outline</span> Video Tour
+          </a>
+        </li>
+
+        <li class="sidebar-list-item profile-item">
+          <a href="#" class="profile-link">
+            <span class="material-icons-outlined">person</span> Profile
+          </a>
+          <div class="profile-details">
+            <p id="profile-username">Username: Loading...</p>
+            <p id="profile-email">Email: Loading...</p>
+            <a href="home.html" class="logout-btn">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+
+        </li>
+      </ul>
+      <!--<div class="dark-mode-toggle">
+                <button id="darkModeToggle">
+                    🌙 Dark Mode
+                </button>
+            </div> -->
+
+
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">MEGHALAYA</p>
+      </div>
+      <div class="page">
+
+        <div class="content">
+          <h1>Don Bosco MUSEUM</h1>
+          <p>
+            Seven storeys of fascinating visuals, colours, and treasures – that is one way to describe Don Bosco Museum.
+            You will first be greeted by the traditional wear of all the different North-Eastern communities as you
+            enter the building, including well-researched sections on the neighbouring countries like Bhutan, Myanmar,
+            and Nepal. The photography section is loaded with rare photos – you can spend hours lost exploring these
+            snippets of tribal life taken across the region and spanning many generations.
+          </p>
+          <div id="image">
+            <img src="https://dbcic.org/wp-content/uploads/2019/11/land5.jpg" height="318px" width="500px" alt="Paris"
+              class="center">
+          </div>
+          <h1>HISTORY</h1>
+          <p>
+            Other highlights of the Museum include the Pre-history Gallery which sheds more light on the origins and
+            migrations of the tribes, and the Land and People Gallery where you can learn more about the beautiful
+            terrain and how it shaped the practices and lifestyles of the indigenous people who call it home. It is
+            adorned with sculptures and portraits. There is a gallery dedicated to the various hunting, gathering, and
+            fishing practices and a gallery dedicated to agriculture. Many visitors find the Traditional Technology
+            exhibits very interesting. Galleries on art, music, housing, and weapons will keep you occupied and
+            fascinated. At the food gallery, you can tuck into some of the delectable dishes in a cosy serving area.
+          </P>
+
+          <div>
+
+            <h1>COLLECTIONS</h1>
+
+            <img src='https://th.bing.com/th/id/OIP.pzIUwL0OcQT4kUzYoNZwjwHaE9?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.W1lU0CILQTBg0pyXOOJ3VAHaFH?w=768&h=530&rs=1&pid=ImgDetMain'
+              height='200px' width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.ooiG5i91TUm5wpwZ4wkBqAHaFj?rs=1&pid=ImgDetMain' height='200px'
+              width="'400px">
+            <img src='https://th.bing.com/th/id/OIP.oF-BGR2NTgSrBpkPMN4G9AHaE8?w=818&h=546&rs=1&pid=ImgDetMain'
+              height='200px' width="'400px">
+
+            <img src='https://travelgangtok.com/uploads/destinations/DT-0238-4076/5821363581.jpg' height='318px'
+              width="'500px">
+          </div>
+
+          <h1>TIMINGS</h1>
+          <div>
+            <P>opens at 10AM and closes at 5PM,</P>
+          </div>
+          <h1>Address</Address>
+          </h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.363390050803!2d91.880157075225!3d25.59283837745834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507ee60bffffff%3A0x2a9116a9dae2156d!2sDon%20Bosco%20Museum!5e0!3m2!1sen!2sin!4v1749337593204!5m2!1sen!2sin"
+            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div>
+            <p>
+              Mawlai Phudmuri, Mawlai Mawdatbaki, Shillong, Meghalaya 793008
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <!-- End Main -->
+
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
